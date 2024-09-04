@@ -216,3 +216,21 @@ nav ul a:hover {
     color: #D32F2F; /* Crimson on hover */
 }
 
+/* Content Container Styles */
+
+#content-container {
+    width: auto;
+    height: auto;
+}
+
+.content-container .row{
+    margin-bottom: 0;
+}
+
+.blurred {
+    /* Blurred state */
+    filter: blur(0.9px);
+    transition: filter 0.5s ease-in-out;
+    pointer-events: none;
+}
+
