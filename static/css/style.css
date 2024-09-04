@@ -264,7 +264,6 @@ nav ul a:hover {
     padding: 10px;
     margin-right: 10px;
     min-width: 33%; 
-    box-sizing: border-box; 
     text-align: center;
 }
 
