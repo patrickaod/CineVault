@@ -396,5 +396,9 @@ nav ul a:hover {
     }
 }
 
-
+@media (max-width:480px){
+    main.container{
+        margin: 0;
+    }
+}
 
