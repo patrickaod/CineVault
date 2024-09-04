@@ -118,3 +118,30 @@ button:hover {
     display: block; /* Show selected form */
     opacity: 1; 
 }
+
+/* Input Field Styles */
+
+#signup-form .input-field,
+#login-form .input-field {
+    background-color: #eceff1;
+    border-radius: 2em;
+}
+
+
+#signup-form .input-field input,
+#signup-form .input-field input.valid,
+#signup-form .input-field input.invalid,
+#login-form .input-field input,
+#login-form .input-field input.valid,
+#login-form .input-field input.invalid {
+    border-bottom: unset !important;
+    box-shadow: unset !important;
+    padding: unset !important;
+    margin: unset !important;
+    margin-left: 3em !important;
+}
+
+.input-field>label:not(.label-icon).active {
+    transform: translateY(-3px) scale(0.8);
+}
+
