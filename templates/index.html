@@ -20,12 +20,14 @@
       <button id="back-button">Back</button>
     </div>
   </div>
-
+  <!-- Signup Form Container -->
   <div id="signup-form" class="form-container">
     <div class="row">
+        <!-- Signup Form -->
       <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
         <input type="hidden" name="form_id" value="sign-up">
         <div class="card-panel">
+        <!-- Username Field -->
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
@@ -34,6 +36,7 @@
               <label for="username">Username</label>
             </div>
           </div>
+        <!-- Password Field -->
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">lock</i>
@@ -42,6 +45,7 @@
               <label for="password">Password</label>
             </div>
           </div>
+        <!-- Submit Form Button -->
           <div class="row">
             <button class="btn btn-primary" class="col s12 btn-large">Signup</button>
           </div>
