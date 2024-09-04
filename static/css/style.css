@@ -267,12 +267,6 @@ nav ul a:hover {
     text-align: center;
 }
 
-.button-panel{
-    display: flex;
-    flex-wrap: nowrap; 
-    justify-content: center;
-}
-
 /* Content Container - Bottom Section Styles */
 
 .bottom-section {
