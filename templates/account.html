@@ -192,7 +192,27 @@
       console.log("Add Movie button clicked!");
     });
 
-    
+    // Edit button click handler
+    $('.editMovieBtn').click(function () {
+      const movieId = $(this).data('id');
+      const title = $(this).data('title');
+      const genre = $(this).data('genre');
+      const rating = $(this).data('rating');
+      const watchlist = $(this).data('watchlist');
+
+      // Set the form fields with the movie data
+      $('#movieId').val(movieId);
+      $('#title').val(title).focus();
+      $('#genre').val(genre);
+      $('#rating').val(rating);
+      $('#watchlist').prop('checked', watchlist === 'True');
+
+      // Blur the content and show the form
+      $('#content-container').addClass('blurred');
+      $('.movieform').show().removeClass('fade-out').addClass('fade-in');
+    });
+
+
 
   });
 </script>
