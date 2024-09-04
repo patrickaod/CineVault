@@ -161,3 +161,21 @@ button:hover {
     pointer-events: none; /* Prevent interaction with the video */
     overflow: clip;
 }
+
+/* Account Static Image Background */
+
+.background-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
