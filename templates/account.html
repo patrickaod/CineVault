@@ -8,4 +8,22 @@
   <img src="{{ url_for('static', filename='images/theater.jpg') }}" alt="Background Image" class="background-image">
 </div>
 
+<!-- Navigation Menu -->
+<header>
+    <nav class="nav-extended navmargin">
+      <div class="nav-wrapper">
+        <a href="{{url_for('account', username=session['user'])}}" class="brand-logo nav-logo m-2 ">
+          <h2>CineVault</h2>
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{{url_for('logout')}}">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Mobile sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="{{url_for('logout')}}">Logout</a></li>
+    </ul>
+  </header>
 {% endblock %}
