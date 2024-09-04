@@ -136,7 +136,13 @@ def account(username):
             # If the user is not found in the database, redirect to the home page
             flash("You need to log in to access your account.", "error")
             return redirect(url_for("index"))
-
+            
+@app.route("/logout")
+def logout():
+    #remove user from state management 
+    session.pop('user')
+    flash("You have been logged out", "success")
+    return redirect(url_for("index"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), 
