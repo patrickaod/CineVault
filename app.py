@@ -69,11 +69,30 @@ def index():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
-    if request.method == 'POST':
+        if request.method == 'POST':
             form_id = request.form.get('form_id')
 
             if form_id == 'movie_user_add':
-                # Add new movie
+                movie_title = request.form.get('title', '').lower()  # Get the title from the form and convert it to lowercase
+
+                # Find the movie in the database
+                movie_check = mongo.db.movies.find_one({'created_by': session["user"], 'title': {'$regex': re.escape(movie_title), '$options': 'i'}})
+
+                watchlist = "yes" if request.form.get("watchlist") else "no"
+
+                if movie_check:
+                    # Update existing movie
+                    updated_movie = {
+                        "title": request.form.get("title"),
+                        "genre": request.form.get("genre"),
+                        "rating": request.form.get("rating"),
+                        "watchlist": watchlist,
+                        'updated_on': datetime.now().strftime('%d/%m/%Y')
+                    }
+                    mongo.db.movies.update_one({'_id': movie_check['_id']}, {'$set': updated_movie})
+                    flash("Movie Successfully Updated", "success")
+                else:
+                    # Add new movie
                     new_movie = {
                         "title": request.form.get("title"),
                         "genre": request.form.get("genre"),
@@ -85,19 +104,19 @@ def account(username):
                     }
                     mongo.db.movies.insert_one(new_movie)
                     flash("Movie Successfully Added", "success")
-    try:
+        try:
             # Attempt to grab the session user's username from the database
             username = mongo.db.users.find_one({"username": session["user"]})["username"]
             
             # If the session is valid, render the account page
             return render_template("account.html", username=username, movies=movies)
         
-    except KeyError:
+        except KeyError:
             # If the session does not have the "user" key, redirect to the home page
             flash("You need to log in to access your account.", "error")
             return redirect(url_for("index"))
         
-    except TypeError:
+        except TypeError:
             # If the user is not found in the database, redirect to the home page
             flash("You need to log in to access your account.", "error")
             return redirect(url_for("index"))
