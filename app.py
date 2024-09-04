@@ -69,6 +69,22 @@ def index():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
+    if request.method == 'POST':
+            form_id = request.form.get('form_id')
+
+            if form_id == 'movie_user_add':
+                # Add new movie
+                    new_movie = {
+                        "title": request.form.get("title"),
+                        "genre": request.form.get("genre"),
+                        "rating": request.form.get("rating"),
+                        "watchlist": watchlist,
+                        'created_by': session['user'],
+                        'created_on': datetime.now().strftime('%d/%m/%Y'),
+                        'updated_on': datetime.now().strftime('%d/%m/%Y')
+                    }
+                    mongo.db.movies.insert_one(new_movie)
+                    flash("Movie Successfully Added", "success")
     try:
             # Attempt to grab the session user's username from the database
             username = mongo.db.users.find_one({"username": session["user"]})["username"]
