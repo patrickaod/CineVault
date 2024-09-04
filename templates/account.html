@@ -244,7 +244,11 @@
       });
     });
 
-    
+    // Cancel delete confirmation
+    $('#confirmCancel').click(function () {
+      $('.delete_confirmation').hide(); // Hide confirmation box
+      $('#content-container').removeClass('blurred'); // Unblur background content
+    });
 
   });
 </script>
