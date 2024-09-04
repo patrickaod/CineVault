@@ -136,7 +136,27 @@ def account(username):
             # If the user is not found in the database, redirect to the home page
             flash("You need to log in to access your account.", "error")
             return redirect(url_for("index"))
-            
+
+@app.route("/search_movies", methods=["POST"])
+def search_movies():
+    search_query = request.form.get('search_movies', '').strip()
+
+    if search_query:
+        # Search for movies that match the search query
+        movies = mongo.db.movies.find({
+            'created_by': session["user"],
+            '$or': [
+                {'title': {'$regex': search_query, '$options': 'i'}},
+                {'genre': {'$regex': search_query, '$options': 'i'}},
+                {'watchlist': {'$regex': search_query, '$options': 'i'}}
+            ]
+        }).sort("created_on", 1)
+    else:
+        # If search query is empty, retrieve all movies
+        movies = mongo.db.movies.find({"created_by": session["user"]}).sort("created_on", 1)
+        
+    return render_template("account.html", username=session["user"], movies=movies)
+
 @app.route("/logout")
 def logout():
     #remove user from state management 
