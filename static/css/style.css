@@ -90,10 +90,6 @@ button:hover {
     cursor: pointer;
 }
 
-.button-container {
-    transition: opacity 0.5s ease-in-out; /* Display animation setting */
-}
-
 #back-button {
     display: none; /* Hidden by defualt */
     position: relative;
