@@ -65,20 +65,20 @@ button:hover {
 }
 
 #header-container {
-    margin-left: 25%;
-    margin-top: 25%;
-    transition: margin 2s ease-in-out;
-    position: relative;
+    margin-left: 25%; /* Intial y-position */
+    margin-top: 25%; /* Intial x-position */
+    transition: margin 2s ease-in-out; /* movement animation setting */
+    position: relative; /* set to always stack the form container underneath */
 }
 
 #header-container.moving {
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-left: 10%; /* Final x-position */
+    margin-top: 10%; /* Final y-position */
 }
 
 #header-container h1 {
-    font-size: 5em;
-    transition: font-size 2s ease-in-out;
+    font-size: 5em; 
+    transition: font-size 2s ease-in-out; /* Font animation setting */
 }
 
 .button-container button,
@@ -86,39 +86,39 @@ button:hover {
     padding: 10px 20px;
     font-size: 1em;
     margin: 5px;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; /* Display animation setting */
     cursor: pointer;
 }
 
 .button-container {
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; /* Display animation setting */
 }
 
 #back-button {
-    display: none; 
+    display: none; /* Hidden by defualt */
     position: relative;
 }
 
 #header-container.moving h1 {
-    font-size: 3.5em;
+    font-size: 3.5em; /* Final font-size */
 }
 
 #header-container.moving .button-container {
-    opacity: 0;
+    opacity: 0; /* Hide form buttons */
 }
 
 #header-container.moving #back-button {
-    display: block;
-    opacity: 1;
+    display: block; /* Show back button */
+    opacity: 1; 
 }
 
 .form-container {
-    display: none; 
+    display: none; /* Hidden by defualt */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
 .form-container.visible {
-    display: block;
-    opacity: 1;
+    display: block; /* Show selected form */
+    opacity: 1; 
 }
