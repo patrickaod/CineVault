@@ -69,7 +69,23 @@ def index():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
-    return render_template("account.html", username=username)
+    try:
+            # Attempt to grab the session user's username from the database
+            username = mongo.db.users.find_one({"username": session["user"]})["username"]
+            
+            # If the session is valid, render the account page
+            return render_template("account.html", username=username, movies=movies)
+        
+    except KeyError:
+            # If the session does not have the "user" key, redirect to the home page
+            flash("You need to log in to access your account.", "error")
+            return redirect(url_for("index"))
+        
+    except TypeError:
+            # If the user is not found in the database, redirect to the home page
+            flash("You need to log in to access your account.", "error")
+            return redirect(url_for("index"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), 
