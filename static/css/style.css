@@ -402,3 +402,8 @@ nav ul a:hover {
     }
 }
 
+@media (max-width: 450px){
+    .nav-logo h2{
+        font-size: clamp(2.8rem ,1vw, 3.56rem);
+    }
+}
