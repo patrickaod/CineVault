@@ -104,6 +104,19 @@ def account(username):
                     }
                     mongo.db.movies.insert_one(new_movie)
                     flash("Movie Successfully Added", "success")
+                
+        elif request.method == 'GET':
+            # Check if delete query parameter is present
+            movie_id = request.args.get('delete_movie_id')
+        
+            if movie_id:
+                # Delete the movie by its ID
+                delete_result = mongo.db.movies.delete_one({'_id': ObjectId(movie_id)})
+
+                if delete_result.deleted_count > 0:
+                    flash("Movie Successfully Deleted", "success")
+                else:
+                    flash("Failed to delete movie", "error")     
         try:
             # Attempt to grab the session user's username from the database
             username = mongo.db.users.find_one({"username": session["user"]})["username"]
