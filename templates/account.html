@@ -90,8 +90,9 @@
         <button id="bottomAddMovieBtn" class="add-movie-btn">Add Movie</button>
     </div>
 </div>
-<!-- Movie form -->
+<!-- Movie form container-->
 <div class="movieform">
+    <!-- Movie form -->
     <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('account', username=session['user'])}}">
       <input type="hidden" name="form_id" value="movie_user_add">
       <div class="card-panel">
@@ -132,6 +133,7 @@
         </div>
       </div>
     </form>
+    <!-- Cancel form button -->
     <button id="moviecancel">Cancel</button>
   </div>
 {% endblock %}
