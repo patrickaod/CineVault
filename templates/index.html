@@ -21,4 +21,33 @@
     </div>
   </div>
 
+  <div id="signup-form" class="form-container">
+    <div class="row">
+      <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
+        <input type="hidden" name="form_id" value="sign-up">
+        <div class="card-panel">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15"
+                pattern="^[a-zA-Z0-9]{5,15}$" required>
+              <label for="username">Username</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="password" name="password" type="password" class="validate" minlength="5" maxlength="15"
+                pattern="^[a-zA-Z0-9]{5,15}$" required>
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn btn-primary" class="col s12 btn-large">Signup</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
 {% endblock %}
