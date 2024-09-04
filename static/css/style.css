@@ -288,3 +288,40 @@ nav ul a:hover {
     display: none; /* Initially hidden, will be shown based on JS */
 }
 
+#addMovieBtn, .movieform {
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+/* Movie Add Form Styles */
+
+.movieform {
+    /* Initial state of the form */
+    display: none; /* Hide the form initially */
+    opacity: 0;
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.movieform .card-panel{
+    width: fit-content;
+    height: fit-content;
+    min-width: 80vw;
+}
+
+.movieform .card-panel input{
+    color: white;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    display: block;
+    opacity: 1;
+}
+
