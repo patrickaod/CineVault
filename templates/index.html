@@ -92,3 +92,46 @@
     </video>
 </div>
 {% endblock %}
+
+{% block scripts %}
+<script>
+  // Header Container Animation  
+  $(document).ready(function () {
+    const $signupButton = $('#signup-button');
+    const $loginButton = $('#login-button');
+    const $backButton = $('#back-button');
+    const $headerContainer = $('#header-container');
+    const $signupForm = $('#signup-form');
+    const $loginForm = $('#login-form');
+
+    function showForm($form) {
+      $headerContainer.addClass('moving');
+
+      setTimeout(function () {
+        $form.addClass('visible');
+      }, 2000); // Show form after the header has finished moving
+    }
+
+    function hideForm($form) {
+      $form.removeClass('visible');
+
+      setTimeout(function () {
+        $headerContainer.removeClass('moving');
+      }, 1000); // Reset header position after form fades out
+    }
+
+    $signupButton.on('click', function () {
+      showForm($signupForm);
+    });
+
+    $loginButton.on('click', function () {
+      showForm($loginForm);
+    });
+
+    $backButton.on('click', function () {
+      hideForm($signupForm);
+      hideForm($loginForm);
+    });
+  });
+</script>
+{% endblock %}
