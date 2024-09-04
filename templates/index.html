@@ -6,89 +6,89 @@
 <div id="header-container">
     <div>
         <!-- Index Header - Logo -->
-      <h1><a href="{{ url_for('index') }}">CineVault</a></h1>
+        <h1><a href="{{ url_for('index') }}">CineVault</a></h1>
     </div>
     <!-- Form Triggers -->
     <div class="button-container">
         <!-- Sign-Up Form Trigger -->
-      <button id="signup-button">Sign Up</button>
-      <!-- Login Form Trigger -->
-      <button id="login-button">Login</button>
+        <button id="signup-button">Sign Up</button>
+        <!-- Login Form Trigger -->
+        <button id="login-button">Login</button>
     </div>
     <div>
         <!-- Escape / Animation Reset Trigger -->
-      <button id="back-button">Back</button>
+        <button id="back-button">Back</button>
     </div>
-  </div>
-  <!-- Signup Form Container -->
-  <div id="signup-form" class="form-container">
+</div>
+<!-- Signup Form Container -->
+<div id="signup-form" class="form-container">
     <div class="row">
         <!-- Signup Form -->
-      <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
-        <input type="hidden" name="form_id" value="sign-up">
-        <div class="card-panel">
-        <!-- Username Field -->
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15"
-                pattern="^[a-zA-Z0-9]{5,15}$" required>
-              <label for="username">Username</label>
+        <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
+            <input type="hidden" name="form_id" value="sign-up">
+            <div class="card-panel">
+                <!-- Username Field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$" required>
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                <!-- Password Field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="password" name="password" type="password" class="validate" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <!-- Submit Form Button -->
+                <div class="row">
+                    <button class="btn btn-primary" class="col s12 btn-large">Signup</button>
+                </div>
             </div>
-          </div>
-        <!-- Password Field -->
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">lock</i>
-              <input id="password" name="password" type="password" class="validate" minlength="5" maxlength="15"
-                pattern="^[a-zA-Z0-9]{5,15}$" required>
-              <label for="password">Password</label>
-            </div>
-          </div>
-        <!-- Submit Form Button -->
-          <div class="row">
-            <button class="btn btn-primary" class="col s12 btn-large">Signup</button>
-          </div>
-        </div>
-      </form>
+        </form>
     </div>
-  </div>
-  <!-- Login Form Container -->
-  <div id="login-form" class="form-container">
+</div>
+<!-- Login Form Container -->
+<div id="login-form" class="form-container">
     <div class="row">
-    <!-- Login Form -->
-      <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
-        <input type="hidden" name="form_id" value="login">
-        <div class="card-panel">
-          <!-- Username Field -->
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="username-login" name="username" type="text" class="validate" required>
-              <label for="username-login">Username</label>
+        <!-- Login Form -->
+        <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
+            <input type="hidden" name="form_id" value="login">
+            <div class="card-panel">
+                <!-- Username Field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="username-login" name="username" type="text" class="validate" required>
+                        <label for="username-login">Username</label>
+                    </div>
+                </div>
+                <!-- Password Field -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="password-login" name="password" type="password" class="validate" required>
+                        <label for="password-login">Password</label>
+                    </div>
+                </div>
+                <!-- Submit Form Button -->
+                <div class="row">
+                    <button class="btn btn-primary" class="col s12 btn-large">Login</button>
+                </div>
             </div>
-          </div>
-          <!-- Password Field -->
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">lock</i>
-              <input id="password-login" name="password" type="password" class="validate" required>
-              <label for="password-login">Password</label>
-            </div>
-          </div>
-          <!-- Submit Form Button -->
-          <div class="row">
-            <button class="btn btn-primary" class="col s12 btn-large">Login</button>
-          </div>
-        </div>
-      </form>
+        </form>
     </div>
-  </div>
-  <!-- Video Background Container -->
-  <div class="video-background">
+</div>
+<!-- Video Background Container -->
+<div class="video-background">
     <!-- Video Background -->
     <video autoplay muted loop id="background-video">
-      <source src="{{ url_for('static', filename='videos/cinema.mp4') }}" type="video/mp4">
+        <source src="{{ url_for('static', filename='videos/cinema.mp4') }}" type="video/mp4">
     </video>
-  </div>
+</div>
 {% endblock %}
