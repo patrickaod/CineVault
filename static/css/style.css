@@ -281,5 +281,17 @@ nav ul a:hover {
     text-align: center;
 }
 
+/* Content Container - Add Movie Form Button Styles */
 
+#middleAddMovieBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden, will be shown based on JS */
+}
+
+#bottomAddMovieBtn {
+    display: none; /* Initially hidden, will be shown based on JS */
+}
 
