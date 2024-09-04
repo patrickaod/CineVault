@@ -407,3 +407,14 @@ nav ul a:hover {
         font-size: clamp(2.8rem ,1vw, 3.56rem);
     }
 }
+
+/* Media Queries - Max Height */
+@media (max-height: 700px ){
+    
+    .middle-section{
+        padding: 0;
+    }
+    .bottom-section{
+        padding: 0;
+    }
+}
