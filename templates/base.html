@@ -23,7 +23,20 @@
 
 <body>
 
+    <!-- flash messages -->
     <section>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <blockquote class="flash-message {{ category }}">
+                            {{ message }} 
+                            <button class="close-btn">&times;</button>
+                        </blockquote>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
     </section>
 
     <main class="container">
