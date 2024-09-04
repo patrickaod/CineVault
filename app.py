@@ -67,6 +67,10 @@ def index():
                 return redirect(url_for('index'))          
     return render_template('index.html')
 
+@app.route("/account/<username>", methods=["GET", "POST"])
+def account(username):
+    return render_template("account.html", username=username)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), 
             port=int(os.environ.get("PORT")), 
