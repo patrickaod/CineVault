@@ -89,7 +89,49 @@
         <!-- Bottom section - Add Button -->
         <button id="bottomAddMovieBtn" class="add-movie-btn">Add Movie</button>
     </div>
-
 </div>
-
+<!-- Movie form -->
+<div class="movieform">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('account', username=session['user'])}}">
+      <input type="hidden" name="form_id" value="movie_user_add">
+      <div class="card-panel">
+        <!-- Title -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="title" name="title" type="text" class="validate" required>
+            <label for="title">Title</label>
+          </div>
+        </div>
+        <!-- Genre -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="genre" name="genre" type="text" class="validate" required>
+            <label for="genre">Genre</label>
+          </div>
+        </div>
+        <!-- Rating -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="rating" name="rating" type="text" class="validate" required>
+            <label for="rating">Review</label>
+          </div>
+        </div>
+        <!-- Watchlist -->
+        <div class="row">
+          <div class="switch">
+            <label for="watchlist">
+              Watchlist
+              <input type="checkbox" id="watchlist" name="watchlist">
+              <span class="lever"></span>
+            </label>
+          </div>
+        </div>
+        <!-- Submission -->
+        <div class="row">
+          <button class="btn btn-primary" class="col s12 btn-large">Submit</button>
+        </div>
+      </div>
+    </form>
+    <button id="moviecancel">Cancel</button>
+  </div>
 {% endblock %}
