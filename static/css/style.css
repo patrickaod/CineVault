@@ -455,7 +455,7 @@ nav ul a:hover {
 
 /* Media Queries - Max Height */
 @media (max-height: 700px ){
-    .top-section .row{
+    .row{
         margin-bottom: 0;
     }
     .middle-section{
