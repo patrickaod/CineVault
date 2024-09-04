@@ -64,7 +64,11 @@
                                     <h2>Genre: {{ movie.genre }} </h2><br>
                                     <h2>Review: {{ movie.rating }}</h2><br>
                                     <h2>To watch: {{ movie.watchlist }}</h2><br>
+                                    {% if movie.created_on == movie.updated_on %}
                                     <h2>Added on: {{ movie.created_on }}</h2><br>
+                                    {% else %}
+                                    <h2>Updated on: {{ movie.updated_on }}</h2><br>
+                                    {% endif %}
                                 </span>
                                 <!-- Movie card button container -->
                                 <div class="row">
