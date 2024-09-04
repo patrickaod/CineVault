@@ -212,6 +212,12 @@
       $('.movieform').show().removeClass('fade-out').addClass('fade-in');
     });
 
+    // Cancel button click handler
+    $('#moviecancel').click(function () {
+      var refreshUrl = "{{ url_for('account', username=username) }}";
+      window.location.href = refreshUrl; // Redirect to the same route
+    });
+
 
 
   });
