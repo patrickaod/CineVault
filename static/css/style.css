@@ -4,54 +4,55 @@
 /* Base Styles */
 
 * {
+    /* Remove default properties */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #121212;  
-    color: #E0E0E0;  
-    font-family: 'Roboto', sans-serif;  
-    overflow: hidden; 
+    background-color: #121212;  /* Dark background */
+    color: #E0E0E0;  /* Light gray text */
+    font-family: 'Roboto', sans-serif;  /* Body font */
+    overflow: hidden; /* Prevents Scrolling */
 }
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
-    color: #FFC107;  
+    font-family: 'Montserrat Subrayada', sans-serif; /* Heading font */
+    color: #FFC107;  /* Gold/Amber for headings */
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;  
-    color: #FFC107;  
+    font-family: 'Oswald', sans-serif;  /* Sub-Heading font */
+    color: #FFC107;  /* Gold/Amber for headings */
 }
 
 a {
-    color: #FFC107 !important;  
-    text-decoration: none;
+    color: #FFC107 !important;  /* Gold/Amber links */
+    text-decoration: none; /* Remove Underline */
 }
 
 button {
-    background-color: #FFC107;  
-    color: #121212;  
-    border: none;
+    background-color: #FFC107;  /* Gold/Amber buttons */
+    color: #121212;  /* Dark text on buttons */
+    border: none; 
     padding: 10px 20px;
     margin: 10px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
-    border-radius: 25px;
-    font-weight: 600;
+    border-radius: 25px; /* Pill-Shaped buttons */
+    font-weight: 600; /* Font-Size */
 }
 
 button:hover {
-    background-color: #D32F2F;  
+    background-color: #D32F2F;  /* Crimson on hover */
 }
 
 .card-panel {
-    background-color: #1C1C1C;  
-    color: #E0E0E0;  
+    background-color: #1C1C1C;  /* Slightly lighter dark for card backgrounds */
+    color: #E0E0E0;  /* Text color */
 }
 
 .white-text {
-    color: #E0E0E0;  
+    color: #E0E0E0;  /* Ensure text inside cards is readable */
 }
