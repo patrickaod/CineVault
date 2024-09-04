@@ -158,3 +158,23 @@
     </div>
   </div>
 {% endblock %}
+
+{% block scripts %}
+<script>
+  $(document).ready(function () {
+    // Check if there are any movie cards
+    if ($('.movie-card').length > 0) {
+      // Movies exist, show bottom button and hide middle button
+      $('#bottomAddMovieBtn').show();
+      $('#middleAddMovieBtn').hide();
+    } else {
+      // No movies, show middle button and hide bottom button
+      $('#middleAddMovieBtn').show();
+      $('#bottomAddMovieBtn').hide();
+    }
+
+
+
+  });
+</script>
+{% endblock %}
