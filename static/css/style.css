@@ -365,4 +365,11 @@ nav ul a:hover {
     }
 }
 
+@media (max-width:850px){
+    .middle-section .card-panel{
+        width: 20vw;
+        min-width: fit-content;
+        margin-right: 100px;       
+    }
+}
 
