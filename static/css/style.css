@@ -145,7 +145,7 @@ button:hover {
     transform: translateY(-3px) scale(0.8);
 }
 
-/*  Index Video Background */
+/* Index Video Background */
 
 .video-background {
     position: fixed; /* Keeps the background fixed while scrolling */
@@ -179,3 +179,40 @@ button:hover {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
 }
+
+/* Navigation Menu Styles */
+
+nav {
+    background: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.navmargin{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+nav ul a {
+    color: #FFC107 !important;  
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    color: #D32F2F !important; 
+}
+
+.sidenav li>a {
+    font-size: 19px;
+}
+
+.nav-logo h2{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: #FFC107;  
+    margin: auto;
+    padding-left: 3%;
+}
+
+.nav-logo h2:hover{
+    color: #D32F2F; 
+}
+
