@@ -42,3 +42,27 @@ def index():
 
             flash('Registration successful! You can now log in.', 'success')
             return render_template('index.html')
+            
+    elif form_id == 'login':
+        if request.method == 'POST':
+            existing_user = mongo.db.users.find_one({'username': request.form.get('username','').lower()})
+
+            if existing_user:
+                role = existing_user.get('role')
+  
+                if role == "user":
+                    #ensure hashed password is correct
+                    if check_password_hash (existing_user['password'], request.form.get('password')):
+                        # put the new user into 'session' cookie
+                        session["user"] = request.form.get('username').lower()
+                        flash('Login successful! You are now log in.', 'success')
+                        return redirect(url_for("account", username=session["user"])) 
+                    else:
+                        #invalid password match
+                        flash("Incorrect Username and/or Password")
+                        return redirect(url_for(index))
+            else:
+                # username doesn't exist
+                flash("Incorrect Username and/or Password", "error")
+                return redirect(url_for('index'))          
+    return render_template('index.html')
