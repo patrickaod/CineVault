@@ -325,3 +325,18 @@ nav ul a:hover {
     opacity: 1;
 }
 
+/* Deletion Confiramtion Container Styles */
+
+.delete_confirmation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+   
+}
+
+.delete_confirmation .card-panel{
+    height: auto;
+    width: fit-content;
+}
