@@ -42,7 +42,7 @@ def index():
 
             flash('Registration successful! You can now log in.', 'success')
             return render_template('index.html')
-            
+
     elif form_id == 'login':
         if request.method == 'POST':
             existing_user = mongo.db.users.find_one({'username': request.form.get('username','').lower()})
@@ -66,3 +66,8 @@ def index():
                 flash("Incorrect Username and/or Password", "error")
                 return redirect(url_for('index'))          
     return render_template('index.html')
+
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"), 
+            port=int(os.environ.get("PORT")), 
+            debug=True)
