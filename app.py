@@ -116,7 +116,10 @@ def account(username):
                 if delete_result.deleted_count > 0:
                     flash("Movie Successfully Deleted", "success")
                 else:
-                    flash("Failed to delete movie", "error")     
+                    flash("Failed to delete movie", "error")   
+        
+        movies = mongo.db.movies.find({"created_by": session["user"]}).sort("created_on", 1)  
+        
         try:
             # Attempt to grab the session user's username from the database
             username = mongo.db.users.find_one({"username": session["user"]})["username"]
