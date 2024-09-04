@@ -183,7 +183,7 @@ button:hover {
 /* Navigation Menu Styles */
 
 nav {
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.12); /* Create a blurred glass effect */
     backdrop-filter: blur(10px);
 }
 
@@ -193,26 +193,26 @@ nav {
 }
 
 nav ul a {
-    color: #FFC107 !important;  
+    color: #FFC107 !important;  /* Gold/Amber for headings */
     text-decoration: none;
 }
 
 nav ul a:hover {
-    color: #D32F2F !important; 
+    color: #D32F2F !important; /* Crimson on hover */
 }
 
 .sidenav li>a {
-    font-size: 19px;
+    font-size: 19px; /* Side Navigation Font-Size */
 }
 
 .nav-logo h2{
-    font-family: 'Montserrat Subrayada', sans-serif;
-    color: #FFC107;  
+    font-family: 'Montserrat Subrayada', sans-serif; /* Heading font */
+    color: #FFC107; /* Gold/Amber for headings */
     margin: auto;
     padding-left: 3%;
 }
 
 .nav-logo h2:hover{
-    color: #D32F2F; 
+    color: #D32F2F; /* Crimson on hover */
 }
 
