@@ -226,7 +226,25 @@
       $('#content-container').addClass('blurred'); // Blur background content
     });
 
+    // Confirm delete click handler
+    $('#confirmDelete').click(function () {
+      const movieId = $(this).data('movie-id'); // Retrieve stored movie ID
 
+      // Perform an AJAX GET request to delete the movie
+      $.ajax({
+        url: "{{ url_for('account', username=session['user']) }}",
+        type: 'GET',
+        data: { delete_movie_id: movieId },
+        success: function (response) {
+          window.location.href = "{{ url_for('account', username=session['user']) }}"; // Refresh the page
+        },
+        error: function () {
+          alert('Failed to delete the movie. Please try again.');
+        }
+      });
+    });
+
+    
 
   });
 </script>
