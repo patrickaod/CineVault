@@ -173,7 +173,26 @@
       $('#bottomAddMovieBtn').hide();
     }
 
+    // Add movie button click handlers
+    $('.add-movie-btn').click(function () {
+      // Fade out the button
+      $(this).addClass('fade-out');
 
+      // Blur the body
+      $('#content-container').addClass('blurred');
+
+      // Wait for the fade-out transition to complete
+      setTimeout(function () {
+        $('#addMovieBtn').hide(); // Hide the button completely
+        $('.movieform').show(); // Show the form
+
+        // Fade in the form
+        $('.movieform').removeClass('fade-out').addClass('fade-in');
+      }, 500); // Match the duration of the fade-out transition
+      console.log("Add Movie button clicked!");
+    });
+
+    
 
   });
 </script>
