@@ -218,6 +218,14 @@
       window.location.href = refreshUrl; // Redirect to the same route
     });
 
+    // Delete button click handler
+    $('.deleteMovieBtn').click(function () {
+      const movieId = $(this).attr('delete_movie_id');
+      $('#confirmDelete').data('movie-id', movieId); // Store movie ID in confirm button
+      $('.delete_confirmation').show(); // Show confirmation box
+      $('#content-container').addClass('blurred'); // Blur background content
+    });
+
 
 
   });
