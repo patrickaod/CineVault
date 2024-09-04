@@ -340,3 +340,29 @@ nav ul a:hover {
     height: auto;
     width: fit-content;
 }
+
+/* Media Queries - Max Width */
+
+@media (max-width:850px){
+    #header-container {
+        margin-left: clamp(0%, 3vw, 25%);
+        margin-top: 25%;
+        transition: margin 2s ease-in-out;
+        position: relative;
+    }
+    
+    #header-container.moving {
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    
+    #header-container h1 {
+        font-size: 5em;
+        transition: font-size 2s ease-in-out;
+    }
+    #header-container.moving h1 {
+        font-size: 3.5em;
+    }
+}
+
+
