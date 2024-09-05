@@ -293,7 +293,6 @@ input[type=search]:not(.browser-default) {
     text-align: center;
 }
 
-
 /* Content Container - Bottom Section Styles */
 
 .bottom-section {
@@ -360,7 +359,6 @@ input[type=search]:not(.browser-default) {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none; 
-   
 }
 
 .delete_confirmation .card-panel{
@@ -381,6 +379,7 @@ input[type=search]:not(.browser-default) {
     flex-direction: column;
     align-items: center;
 }
+
 .flash-message {
     border-radius: 25px; /* High border-radius for pill shape */
     color: #fff;
@@ -395,16 +394,20 @@ input[type=search]:not(.browser-default) {
     font-family: Arial, sans-serif;
     width: auto; /* Adjust width to fit content */
 }
+
 .flash-message.show {
     opacity: 1;
     transform: translateY(0);
 }
+
 .flash-message.success {
     background-color: #6fc0d4; /* Blue */
 }
+
 .flash-message.error {
     background-color: #f17168; /* Red */
 }
+
 .flash-message .close-btn {
     background: none;
     border: none;
