@@ -24,7 +24,7 @@
 <body>
 
     <!-- flash messages -->
-    <section>
+    <div>
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 <div class="flash-messages">
@@ -37,7 +37,7 @@
                 </div>
             {% endif %}
         {% endwith %}
-    </section>
+    </div>
 
     <main class="container">
         {% block content %}
