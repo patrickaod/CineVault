@@ -89,3 +89,19 @@ Defensive programming was manually tested with the below user acceptance testing
 | | When the add form is displayed everything should be disabled bar the nav | Tested the feature by doing displaying the form | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountAddForm.png) |
 | | When the delete confirmation form is displayed everything should be disabled bar the nav | Tested the feature by doing Y | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountDelConf.pngg) |
 
+## User Story Testing
+
+| User Story | Screenshot |
+| --- | --- |
+| As a new site user, I would like to collate my favorite movies, so that I can enjoy them at a later date.|![screenshot](documentation/screenshots/shinningMovieCard.jpeg) |
+| As a new site user, I would like to review movies I add, so that can remind myself how I felt. | ![screenshot](documentation/screenshots/sideScrolling.jpeg) |
+| As a new site user, I would like to create a watchlist of things I want to see, so that it speeds up the process of me looking for something later. | ![screenshot](documentation/screenshots/sideScrolling.jpeg) |
+| As a new site user, I would like an easily searchable list of movies, so that I can find something to watch quickly.| ![screenshot](documentation/screenshots/search.jpeg) |
+| As a new site user, I would like my movies to be seperated by genre, so that I can different collections of movies.| ![screenshot](documentation/screenshots/shinningMovieCard.jpeg) |
+| As a returning site user, I would like everything to be save, so that I don't have the hassle of re-uploading anything.| ![screenshot](documentation/screenshots/sessionUseage.jpeg) |
+| As a returning site user, I would like to easily manageable, so that I can add or remove movies at will.| ![screenshot](documentation/screenshots/editAndDelete.jpeg) |
+| As a returning site user, I would like to know when something was last updated, so that I can keep track of my collection.| ![screenshot](documentation/screenshots/sideScrolling.jpeg) |
+| As a returning site user, I would like to user-friendly features, so that I can back out of a decision if I want.| ![screenshot](documentation/screenshots/deleteConfirm.jpeg) |
+| As a returning site user, I would like to know my collection is safe, so that I can have piece of mind.| ![screenshot](documentation/screenshots/tryExceptCase.jpeg) |
+
+
