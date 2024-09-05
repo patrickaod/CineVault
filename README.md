@@ -128,3 +128,112 @@ Account
 
 </details>
 
+## Features
+
+### Existing Features
+
+- **Animated Header and Form Fields**
+
+    - The animation provides a smooth, enticing, responsive introduction to the website.
+
+![Header and Form Animation](documentation/screenRecordings/headerAnimation.gif)
+
+- **Minimalist Homepage**
+
+    - The minimalist homepage focuses user attention only leaving room for the essentials: the logo, logout, add, and search functions.
+
+![Minimalist Homepage](documentation/screenshots/minimalistHomepage.jpeg)
+
+- **Grey Scale Background**
+
+    - The dark background maintains the theme while adding vibrant elements to capture and retain user attention.
+
+![Grey Scale Background](static/images/theater.jpg)
+
+- **Frosted Glass Navigation Bar**
+
+    - The frosted glass navigation bar enhances the theme with a sleek, modern look while keeping the focus on key navigation elements.
+
+![Frosted Glass Navigation Bar](documentation/screenshots/frostedNavBar.jpeg)
+
+- **Side Navigation**
+
+    - The side navigation menu offers a convient navigation tool to mobile users. 
+
+![Side Navigation](documentation/screenshots/sideNav.jpeg)
+
+- **Logout**
+
+    - The logout feature gives users a quick and easy way to exit their accounts should they wish to log in again as alternative users. 
+
+![Logout](documentation/screenshots/logout.jpeg)
+
+- **Flash Messages**
+
+    - Flash messages provide real-time feedback to users by displaying temporary notifications, such as success or error messages, that automatically disappear after a set period.
+
+![Flash Messages](documentation/screenshots/flashmessages.png)
+
+- **Search Bar**
+
+    - A search bar allows users to quickly find content by entering keywords such as "title", "genre", or "watchlist", enhancing navigation and usability.
+
+![Search Bar](documentation/screenshots/search.jpeg)
+
+- **Dynamic Add Button**
+
+    - The add button dynamically appears based on whether movies are displayed on the screen, preventing overlap and ensuring a clean layout. 
+
+![Middle Add Button](documentation/screenshots/midAddButton.jpeg)
+![Bottom Add Button](documentation/screenshots/bottomAddButton.jpeg)
+
+- **Movie Add Form**
+
+    - The movie add form directs user focus by blurring and disabling the background. It turns green upon successful input, providing positive feedback.
+
+![Movie Add Form](documentation/screenshots/movieAddForm.jpeg)
+
+- **Movie Card**
+
+    - The movie card delivers clear, straightforward billing of user input and updates dynamically as changes are made.
+
+![Movie Card](documentation/screenshots/shinningMovieCard.jpeg)
+
+- **Side Scrolling**
+
+    - As the movie list expands, items stack to the right and eventually transition to a scrollable view, similar to platforms like Netflix.
+
+![Side Scrolling](documentation/screenshots/sideScrolling.jpeg)
+
+- **Edit Delete Button**
+
+    - The edit and delete buttons are displayed on each card for easy management, while remaining unobtrusive to maintain a clean page layout.
+
+![Edit Delete Button](documentation/screenshots/editAndDelete.jpeg)
+
+- **Delete Confirmation**
+
+    - The delete confirmation prompts users to verify their choice before finalising, preventing accidental deletions and ensuring deliberate actions.
+
+![Delete Confirmation](documentation/screenshots/deleteConfirm.jpeg)
+
+- **User Authentication**
+
+    - User authorization ensures secure access by verifying credentials and managing permissions. The role-based system assigns a session token for accessing personal data, keeping the experience both seamless and protected.
+
+![User Authentication](documentation/screenshots/userAuth.jpeg)
+
+- **Session Token Usage**
+
+    - Statements like the example below always verify the current user before displaying any content or routing, ensuring high security.
+
+![Session Token Usage](documentation/screenshots/sessionUseage.jpeg)
+
+- **Session Token Error Handling**
+
+    - To prevent brute force attacks, try and except blocks handle errors and redirect unauthorized users back to the index page. 
+
+![Session Token Error Handling](documentation/screenshots/tryExceptCase.jpeg)
+
+
+
