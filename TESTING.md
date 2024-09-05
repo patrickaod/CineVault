@@ -11,9 +11,9 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| templates | account.html | ![screenshot](documentation/testingScreenshots/accountHtmlValidation.jpeg) | Errors due to validator unable to interpret jinja |
-| templates | index.html | ![screenshot](documentation/testingScreenshots/indexHtmlValidation.jpeg) | Errors due to validator unable to interpret jinja |
-| templates | base.html | ![screenshot](documentation/testingScreenshots/baseHtmlValidation.jpeg) | Errors due to validator unable to interpret jinja |
+| templates | account.html | ![screenshot](documentation/testingScreenshots/accountHtmlValidation.jpeg) | Errors due to validator unable to interpret Jinja |
+| templates | index.html | ![screenshot](documentation/testingScreenshots/indexHtmlValidation.jpeg) | Errors due to validator unable to interpret Jinja |
+| templates | base.html | ![screenshot](documentation/testingScreenshots/baseHtmlValidation.jpeg) | Errors due to validator unable to interpret Jinja |
 
 ### CSS
 
@@ -21,7 +21,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | style.css | ![screenshot](documentation/testingScreenshots/stylesCssValidator.jpeg) | One warning due to validator unable to interpret @import links |
+| static | style.css | ![screenshot](documentation/testingScreenshots/stylesCssValidator.jpeg) | One warning due to validator being unable to interpret @import links |
 
 ### JavaScript
 
@@ -39,7 +39,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| root | app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/patrickaod/CineVault/main/app.py) | ![screenshot](documentation/testingScreenshots/pythonValidator.jpeg) | Unfortunately, seperating the mongodb queries prevented the code base from running. To retain stability further investigation is require to resolve these linting issue. |
+| root | app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/patrickaod/CineVault/main/app.py) | ![screenshot](documentation/testingScreenshots/pythonValidator.jpeg) | Unfortunately, seperating the mongodb queries prevented the code base from running. To retain stability further investigation is required to resolve these linting issue. |
 
 ## Browser Compatibility
 
@@ -72,8 +72,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Index | ![screenshot](documentation/testingScreenshots/googleLighthouseMobile.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktop.png) | postive results |
-| Account | ![screenshot](documentation/testingScreenshots/googleLighthouseMobileAccount.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktopAccount.png) | postive results |
+| Index | ![screenshot](documentation/testingScreenshots/googleLighthouseMobile.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktop.png) | positive results |
+| Account | ![screenshot](documentation/testingScreenshots/googleLighthouseMobileAccount.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktopAccount.png) | positive results |
 
 
 ## Defensive Programming
@@ -87,7 +87,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | When user clicks back during animation the container should return | Tested the feature by doing the test | The feature did return mid animation, but produced a form | The feature passed the test and this error is produced by the same events-pointer issue. | ![screenshot](documentation/defensiveTesting/unexpectedForm.gif) |
 | Account | | | | | |
 | | When the add form is displayed everything should be disabled bar the nav | Tested the feature by doing displaying the form | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountAddForm.png) |
-| | When the delete confirmation form is displayed everything should be disabled bar the nav | Tested the feature by doing Y | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountDelConf.pngg) |
+| | When the delete confirmation form is displayed everything should be disabled except for the nav | Tested the feature by doing Y | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountDelConf.pngg) |
 
 ## User Story Testing
 
@@ -102,7 +102,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to easily manageable, so that I can add or remove movies at will.| ![screenshot](documentation/screenshots/editAndDelete.jpeg) |
 | As a returning site user, I would like to know when something was last updated, so that I can keep track of my collection.| ![screenshot](documentation/screenshots/sideScrolling.jpeg) |
 | As a returning site user, I would like to user-friendly features, so that I can back out of a decision if I want.| ![screenshot](documentation/screenshots/deleteConfirm.jpeg) |
-| As a returning site user, I would like to know my collection is safe, so that I can have piece of mind.| ![screenshot](documentation/screenshots/tryExceptCase.jpeg) |
+| As a returning site user, I would like to know my collection is safe, so that I can have peace of mind.| ![screenshot](documentation/screenshots/tryExceptCase.jpeg) |
 
 ## Automated Testing
 
@@ -139,7 +139,7 @@ For this project I have chosen to not include automated testing. Jest is well-su
 
     ![screenshot](documentation/bugs/codeSplittingIssue.jpeg)
 
-    - Attempted fix: The only thing that worked was reassembling the Mongodb queries or statments. 
+    - Attempted fix: The only thing that worked was reassembling the Mongodb queries or statements. 
 
 > [!NOTE]  
 > There are no remaining bugs that I am aware of.
