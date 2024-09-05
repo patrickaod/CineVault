@@ -51,3 +51,17 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Firefox | ![screenshot](documentation/testingScreenshots/indexFirefox.png) | ![screenshot](documentation/testingScreenshots/accountFirefox.png)| Works as expected |
 | Edge | ![screenshot](documentation/testingScreenshots/indexEdge.jpeg) | ![screenshot](documentation/testingScreenshots/accountEdge.jpeg) | Works as expected |
 
+## Responsiveness
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Home | About | Notes |
+| --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/testingScreenshots/indexMobile.png) | ![screenshot](documentation/testingScreenshots/accountPhone.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/testingScreenshots/indexTablet.png) | ![screenshot](documentation/testingScreenshots/accountTablet.png) | Works as expected |
+| Desktop | ![screenshot](documentation/testingScreenshots/indexLaptop.png) | ![screenshot](documentation/testingScreenshots/accountLaptop.png) | Works as expected |
+| XL Monitor | ![screenshot](documentation/testingScreenshots/indexXlaptop.png) | ![screenshot](documentation/testingScreenshots/accountXlaptop.png) |  Works as expected |
+| Google Pixel 7 Pro | ![screenshot](documentation/testingScreenshots/indexPixel7.png) | ![screenshot](documentation/testingScreenshots/accountPixel7.png) |  Works as expected |
+
+
+
