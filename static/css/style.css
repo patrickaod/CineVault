@@ -249,7 +249,7 @@ nav ul a:hover {
     white-space: nowrap; /* Prevent line breaks */
 }
 
-.middle-section .card-panel span h2{
+.middle-section .card-panel div h2{
     margin: 10px;
     font-size: clamp(1rem, 2vw, 2rem);
 }
