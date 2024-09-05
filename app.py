@@ -49,26 +49,26 @@ def index():
 
     elif form_id == 'login':
         if request.method == 'POST':
-            existing_user = mongo.db.users.find_one({'username': request.form.get('username','').lower()})
+            existing_user = mongo.db.users.find_one({'username': request.form.get('username', '').lower()})
 
             if existing_user:
                 role = existing_user.get('role')
-  
+
                 if role == "user":
-                    #ensure hashed password is correct
-                    if check_password_hash (existing_user['password'], request.form.get('password')):
+                    # ensure hashed password is correct
+                    if check_password_hash(existing_user['password'], request.form.get('password')):
                         # put the new user into 'session' cookie
                         session["user"] = request.form.get('username').lower()
                         flash('Login successful! You are now log in.', 'success')
-                        return redirect(url_for("account", username=session["user"])) 
+                        return redirect(url_for("account", username=session["user"]))
                     else:
-                        #invalid password match
+                        # invalid password match
                         flash("Incorrect Username and/or Password")
                         return redirect(url_for(index))
             else:
                 # username doesn't exist
                 flash("Incorrect Username and/or Password", "error")
-                return redirect(url_for('index'))          
+                return redirect(url_for('index'))
     return render_template('index.html')
 
 
@@ -79,14 +79,10 @@ def account(username):
 
         if form_id == 'movie_user_add':
             # Get the title from the form and convert it to lowercase
-            movie_title = request.form.get
-            ('title', '').lower()
+            movie_title = request.form.get('title', '').lower()
 
             # Find the movie in the database
-            movie_check = mongo.db.movies.find_one
-            ({'created_by': session["user"], 'title':
-                {'$regex': re.escape(movie_title),
-                    '$options': 'i'}})
+            movie_check = mongo.db.movies.find_one({'created_by': session["user"], 'title': {'$regex': re.escape(movie_title), '$options': 'i'}})
             watchlist = "yes" if request.form.get("watchlist") else "no"
 
             if movie_check:
@@ -98,8 +94,7 @@ def account(username):
                     "watchlist": watchlist,
                     'updated_on': datetime.now().strftime('%d/%m/%Y')
                 }
-                mongo.db.movies.update_one
-                ({'_id': movie_check['_id']}, {'$set': updated_movie})
+                mongo.db.movies.update_one({'_id': movie_check['_id']}, {'$set': updated_movie})
                 flash("Movie Successfully Updated", "success")
             else:
                 # Add new movie
@@ -137,8 +132,7 @@ def account(username):
         ({"username": session["user"]})["username"]
 
         # If the session is valid, render the account page
-        return render_template("account.html", username=username,
-                               movies=movies)
+        return render_template("account.html", username=username, movies=movies)
 
     except KeyError:
         # If the session does not have the "user" key, redirect to the index
@@ -157,9 +151,7 @@ def search_movies(username):
 
     if search_query:
         # Search for movies that match the search query
-        movies = mongo.db.movies.find({
-            'created_by': session["user"],
-            '$or': [
+        movies = mongo.db.movies.find({'created_by': session["user"], '$or': [
                 {'title': {'$regex': search_query, '$options': 'i'}},
                 {'genre': {'$regex': search_query, '$options': 'i'}},
                 {'watchlist': {'$regex': search_query, '$options': 'i'}}
@@ -167,11 +159,9 @@ def search_movies(username):
         }).sort("created_on", 1)
     else:
         # If search query is empty, retrieve all movies
-        movies = mongo.db.movies.find
-        ({"created_by": session["user"]}).sort("created_on", 1)
+        movies = mongo.db.movies.find({"created_by": session["user"]}).sort("created_on", 1)
 
-    return render_template("account.html", username=session["user"],
-                           movies=movies)
+    return render_template("account.html", username=session["user"], movies=movies)
 
 
 @app.route("/logout")
