@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 import re
 from flask import Flask, flash, render_template, redirect, request
-session, url_for
+from flask import session, url_for
 
 if os.path.exists("env.py"):
     import env
@@ -133,24 +133,24 @@ def account(username):
     movies = mongo.db.movies.find
     ({"created_by": session["user"]}).sort("created_on", 1)
 
+    try:
+        # Attempt to grab the session user's username from the database
+        username = mongo.db.users.find_one
+        ({"username": session["user"]})["username"]
 
-try:
-    # Attempt to grab the session user's username from the database
-    username = mongo.db.users.find_one
-    ({"username": session["user"]})["username"]
+        # If the session is valid, render the account page
+        return render_template("account.html", username=username,
+                               movies=movies)
 
-    # If the session is valid, render the account page
-    return render_template("account.html", username=username, movies=movies)
+    except KeyError:
+        # If the session does not have the "user" key, redirect to the index
+        flash("You need to log in to access your account.", "error")
+        return redirect(url_for("index"))
 
-except KeyError:
-    # If the session does not have the "user" key, redirect to the home page
-    flash("You need to log in to access your account.", "error")
-    return redirect(url_for("index"))
-
-except TypeError:
-    # If the user is not found in the database, redirect to the home page
-    flash("You need to log in to access your account.", "error")
-    return redirect(url_for("index"))
+    except TypeError:
+        # If the user is not found in the database, redirect to the index
+        flash("You need to log in to access your account.", "error")
+        return redirect(url_for("index"))
 
 
 @app.route("/search_movies", methods=["POST"])
