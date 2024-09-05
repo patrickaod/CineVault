@@ -76,3 +76,16 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Account | ![screenshot](documentation/testingScreenshots/googleLighthouseMobileAccount.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktopAccount.png) | postive results |
 
 
+## Defensive Programming
+
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| Index | | | | | |
+| | Header container moves to top right when user clicks a button and displays a form | When user clicks the disappeared buttons it creats multiple forms | The feature didn't behave as expected | There is an easy fix by adding no-pointer events to the class| ![screenshot](documentation/defensiveTesting/dupilateForms.png) |
+| | When user clicks back during animation the container should return | Tested the feature by doing the test | The feature did return mid animation, but produced a form | The feature passed the test and this error is produced by the same events-pointer issue. | ![screenshot](documentation/defensiveTesting/unexpectedForm.gif) |
+| Account | | | | | |
+| | When the add form is displayed everything should be disabled bar the nav | Tested the feature by doing displaying the form | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountAddForm.png) |
+| | When the delete confirmation form is displayed everything should be disabled bar the nav | Tested the feature by doing Y | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountDelConf.pngg) |
+
