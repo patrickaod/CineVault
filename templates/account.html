@@ -204,8 +204,11 @@
       // Set the form fields with the movie data
       $('#movieId').val(movieId);
       $('#title').val(title).focus();
+      $('#title').val(title).focus().siblings('label').addClass('active');
       $('#genre').val(genre);
+      $('#genre').val(genre).siblings('label').addClass('active');
       $('#rating').val(rating);
+      $('#rating').val(rating).siblings('label').addClass('active');
       $('#watchlist').prop('checked', watchlist === 'True');
 
       // Blur the content and show the form
