@@ -274,3 +274,31 @@ Account
 - [![Coolors](https://img.shields.io/badge/Coolors-grey?)](https://coolors.co/) used for colour scheme.
 - [![ClipChamp](https://img.shields.io/badge/ClipChamp-grey?)](https://clipchamp.com/en/) used for Gif creation.
 
+## Database Design
+
+My project uses a non-relational database with MongoDB, and therefore the database architecture doesn't have actual relationships like a relational database would.
+
+My database is called **project3**.
+
+It contains 2 collections:
+
+- **users**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | username | String | |
+    | password | String | uses Secure Hash Algorithm (scrypt) |
+    | role | String | 
+
+- **movies**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | title | String |  |
+    | genre | String | |
+    | rating | String | |
+    | watchlist | String | |
+    | created_by | String | selected from the *users* collection |
+    | created_on | Date |  |
+    | updated_on | Date |  |
+
