@@ -62,6 +62,10 @@ In case the primary fonts fail to load, I’ve set a fallback to sans-serif. Thi
 
 Using the Materialize framework streamlines the development process by providing pre-built components and responsive design elements. I incorporated various icons from its library to enhance the visual appeal of the application, making the interface more intuitive and engaging for users.
 
+**Favicon ([favicon.io](https://favicon.io/emoji-favicons/cinema)):**
+
+A favicon enhances the user experience by providing a small, recognizable icon that appears in the browser tab, bookmarks, and history, helping users quickly identify and navigate back to your website. It also adds a professional touch and strengthens brand identity.
+
 ## User Stories
 
 ### New Site Users
@@ -74,11 +78,9 @@ Using the Materialize framework streamlines the development process by providing
 
 ### Returning Site Users
 
-- As a returning site user, I would like to everything to be save, so that I don't have the hassle of re-uploading anything.
+- As a returning site user, I would like everything to be save, so that I don't have the hassle of re-uploading anything.
 - As a returning site user, I would like to easily manageable, so that I can add or remove movies at will.
 - As a returning site user, I would like to know when something was last updated, so that I can keep track of my collection.
 - As a returning site user, I would like to user-friendly features, so that I can back out of a decision if I want.
 - As a returning site user, I would like to know my collection is safe, so that I can have piece of mind.
-
-
 
