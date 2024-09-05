@@ -33,3 +33,12 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | templates | index.html | ![screenshot](documentation/testingScreenshots/jsIndexValidation.jpeg) | |
 | static | script.js | ![screenshot](documentation/testingScreenshots/jsScriptValidation.jpeg) | |
 
+### Python
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+| Directory | File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| root | app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/patrickaod/CineVault/main/app.py) | ![screenshot](documentation/testingScreenshots/pythonValidator.jpeg) | Unfortunately, seperating the mongodb queries prevented the code base from running. To retain stability further investigation is require to resolve these linting issue. |
+
+
