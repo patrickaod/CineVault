@@ -63,7 +63,6 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | XL Monitor | ![screenshot](documentation/testingScreenshots/indexXlaptop.png) | ![screenshot](documentation/testingScreenshots/accountXlaptop.png) |  Works as expected |
 | Google Pixel 7 Pro | ![screenshot](documentation/testingScreenshots/indexPixel7.png) | ![screenshot](documentation/testingScreenshots/accountPixel7.png) |  Works as expected |
 
-
 ## Lighthouse Audit
 
 Lighthouse is a tool for auditing web pages, assessing performance, accessibility, best practices, and SEO. To test your live site, you can use Chrome DevTools, the Lighthouse CLI, PageSpeed Insights, or Web.dev Measure. Key areas to analyse performance metrics like loading speed and visual stability, accessibility, and SEO. Integrating Lighthouse into your project can helps enhance your site's user experience and search engine visibility.
@@ -74,7 +73,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | --- | --- | --- | --- |
 | Index | ![screenshot](documentation/testingScreenshots/googleLighthouseMobile.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktop.png) | positive results |
 | Account | ![screenshot](documentation/testingScreenshots/googleLighthouseMobileAccount.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktopAccount.png) | positive results |
-
 
 ## Defensive Programming
 
