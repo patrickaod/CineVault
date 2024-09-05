@@ -104,4 +104,42 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to user-friendly features, so that I can back out of a decision if I want.| ![screenshot](documentation/screenshots/deleteConfirm.jpeg) |
 | As a returning site user, I would like to know my collection is safe, so that I can have piece of mind.| ![screenshot](documentation/screenshots/tryExceptCase.jpeg) |
 
+## Automated Testing
 
+For this project I have chosen to not include automated testing. Jest is well-suited for unit testing and mocking in more complex, component-based frameworks like React. However, for the scope of this project, which involves straightforward jQuery operations for class manipulation and Materialize UI components, a simpler approach to testing was deemed more appropriate. The primary aim was to ensure that the application was functional and met its core requirements, and the limited time and resources available were allocated to other critical aspects of development. I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
+
+## Bugs
+
+- Defensive Test: Duplicate forms
+
+    ![screenshot](documentation/defensiveTesting/dupilateForms.png)
+
+    - To fix this, I added pointer-events: none to the class.
+
+- Visual issues with flash messages.
+
+    ![screenshot](documentation/bugs/flashVisError.png)
+
+    - To fix this, I removed a materialize css style by replacing the surrounding blockquotes with div tags.
+
+- Unknown error: Created an issue with the component layout or disabled all the components.
+
+    ![screenshot](documentation/bugs/componentsDisabled.png)
+
+    - To fix this, I tracked the issue down to a missing div tag.
+
+- All the label overlap the input in my form fields 
+    ![screenshot](documentation/bugs/formFieldIssue.png)
+
+    - To fix this, I injected active with my dynamic field injection. 
+
+## Unfixed Bugs
+
+- Unknown Problem: Splitting the MongoDB requests creates Type and Attribute errors outside my codebase
+
+    ![screenshot](documentation/bugs/codeSplittingIssue.jpeg)
+
+    - Attempted fix: The only thing that worked was reassembling the Mongodb queries or statments. 
+
+> [!NOTE]  
+> There are no remaining bugs that I am aware of.
