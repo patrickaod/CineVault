@@ -41,4 +41,13 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | --- | --- | --- | --- | --- |
 | root | app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/patrickaod/CineVault/main/app.py) | ![screenshot](documentation/testingScreenshots/pythonValidator.jpeg) | Unfortunately, seperating the mongodb queries prevented the code base from running. To retain stability further investigation is require to resolve these linting issue. |
 
+## Browser Compatibility
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Home | Account | Notes |
+| --- | --- | --- | --- |
+| Chrome | ![screenshot](documentation/testingScreenshots/indexChrome.png) | ![screenshot](documentation/testingScreenshots/accountChrome.png) | Works as expected |
+| Firefox | ![screenshot](documentation/testingScreenshots/indexFirefox.png) | ![screenshot](documentation/testingScreenshots/accountFirefox.png)| Works as expected |
+| Edge | ![screenshot](documentation/testingScreenshots/indexEdge.jpeg) | ![screenshot](documentation/testingScreenshots/accountEdge.jpeg) | Works as expected |
 
