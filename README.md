@@ -302,3 +302,192 @@ It contains 2 collections:
     | created_on | Date |  |
     | updated_on | Date |  |
 
+## Testing
+
+> [!NOTE]  
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+The live deployed application can be found deployed on [Heroku](https://cinevault-f47e66547791.herokuapp.com).
+
+### MongoDB Non-Relational Database
+
+This project uses [MongoDB](https://www.mongodb.com) for the Non-Relational Database.
+
+To obtain your own MongoDB Database URI, sign-up on their site, then follow these steps:
+
+- The name of the database on MongoDB should be called **insert-your-database-name-here**.
+- The collection(s) needed for this database should be **insert-your-collection-names-here**.
+- Click on the **Cluster** name created for the project.
+- Click on the **Connect** button.
+- Click **Connect Your Application**.
+- Copy the connection string, and replace `password` with your own password (also remove the angle-brackets).
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
+| Key | Value |
+| --- | --- |
+| `DATABASE_URL` | user's own value |
+| `IP` | 0.0.0.0 |
+| `MONGO_DBNAME` | user's own value |
+| `MONGO_URI` | user's own value |
+| `PORT` | 5000 |
+| `SECRET_KEY` | user's own value |
+
+Heroku needs three additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+- runtime.txt
+
+You can install this project's **requirements** (where applicable) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+
+- `echo web: python app.py > Procfile`
+- *replace **app.py** with the name of your primary Flask app name; the one at the root-level*
+
+The **runtime.txt** file needs to know which Python version you're using:
+1. type: `python3 --version` in the terminal.
+2. in the **runtime.txt** file, add your Python version:
+	- `python-3.9.19`
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+	- `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+
+- `pip3 install -r requirements.txt`.
+
+If you are using SQLAlchemy for your project, you need to create a local PostgreSQL database.
+In this example, the example database name is **db-name**.
+
+```shell
+workspace (branch) $ set_pg
+workspace (branch) $ psql
+
+... connection to postgres ...
+
+postgres=# CREATE DATABASE db-name;
+CREATE DATABASE
+postgres=# \c db-name;
+You are now connected to database "db-name" as user "foobar".
+db-name=# \q
+```
+
+Once that database is created, you must migrate the database changes from your models.py file.
+This example uses **app-name** for the name of the primary Flask application.
+
+```shell
+workspace (branch) $ python3
+
+... connection to Python CLI ...
+
+>>> from app-name import db
+>>> db.create_all()
+>>> exit()
+```
+
+To confirm that the database table(s) have been created, you can use the following:
+
+```shell
+workspace (branch) $ psql -d db-name
+
+... connection to postgres ...
+
+postgres=# \dt
+
+	List of relations
+Schema | Name | Type | Owner
+-------+------+------+--------
+public | blah1 | table | foobar
+public | blah2 | table | foobar
+public | blah3 | table | foobar
+
+db-name=# \q
+```
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps, plus a few extras.
+
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("MONGO_DBNAME", "user's own value")
+os.environ.setdefault("MONGO_URI", "user's own value")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "user's own value")
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DB_URL", "user's own value")
+os.environ.setdefault("DEBUG", "True")
+os.environ.setdefault("DEVELOPMENT", "True")
+```
+
+If using Flask-Migrate, make sure to include the following steps as well.
+
+During the course of development, it became necessary to update the PostgreSQL data models.
+In order to do this, [Flask-Migrate](https://flask-migrate.readthedocs.io) was used.
+
+- `pip3 install Flask-Migrate`
+- Import the newly installed package on your main `__init__.py` file:
+	- `from flask_migrate import Migrate`
+- Define **Migrate** in the same file after **app** and **db** are defined:
+	- `migrate = Migrate(app, db)`
+- Initiate the migration changes in the terminal:
+
+```shell
+workspace (branch) $ flask db init
+
+	... generating migrations ...
+
+workspace (branch) $ set_pg
+workspace (branch) $ flask db migrate -m "Add a commit message for this migration"
+
+	... migrating changes ...
+
+workspace (branch) $ flask db upgrade
+
+	... updating database ...
+```
+
