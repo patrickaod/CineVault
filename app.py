@@ -49,27 +49,26 @@ def index():
 
     elif form_id == 'login':
         if request.method == 'POST':
-            existing_user = mongo.db.users.find_one
-            ({'username': request.form.get('username', '').lower()})
+            existing_user = mongo.db.users.find_one({'username': request.form.get('username','').lower()})
 
             if existing_user:
                 role = existing_user.get('role')
-
+  
                 if role == "user":
-                    # ensure hashed password is correct
-                    if check_password_hash:
-                        (existing_user['password'],
-                            request.form.get('password'))
+                    #ensure hashed password is correct
+                    if check_password_hash (existing_user['password'], request.form.get('password')):
                         # put the new user into 'session' cookie
                         session["user"] = request.form.get('username').lower()
-                        flash
-                        ('Login successful! You are now log in.', 'success')
-                        return redirect
-                        (url_for("account", username=session["user"]))
+                        flash('Login successful! You are now log in.', 'success')
+                        return redirect(url_for("account", username=session["user"])) 
                     else:
-                        # invalid password match
+                        #invalid password match
                         flash("Incorrect Username and/or Password")
-                        return redirect(url_for('index'))
+                        return redirect(url_for(index))
+            else:
+                # username doesn't exist
+                flash("Incorrect Username and/or Password", "error")
+                return redirect(url_for('index'))          
     return render_template('index.html')
 
 
@@ -130,8 +129,7 @@ def account(username):
             else:
                 flash("Failed to delete movie", "error")
 
-    movies = mongo.db.movies.find
-    ({"created_by": session["user"]}).sort("created_on", 1)
+    movies = mongo.db.movies.find({"created_by": session["user"]}).sort("created_on", 1)
 
     try:
         # Attempt to grab the session user's username from the database
