@@ -84,3 +84,47 @@ A favicon enhances the user experience by providing a small, recognizable icon t
 - As a returning site user, I would like to user-friendly features, so that I can back out of a decision if I want.
 - As a returning site user, I would like to know my collection is safe, so that I can have piece of mind.
 
+## Wireframes
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Mobile Wireframes
+
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
+
+Index
+  - ![screenshot](documentation/wireframes/mobilewireframeIndex.png)
+
+Account
+  - ![screenshot](documentation/wireframes/mobilewireframeAccount1.png)
+
+</details>
+
+### Tablet Wireframes
+
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
+
+Index
+  - ![screenshot](documentation/wireframes/tabletwireframeIndex.png)
+
+Account
+  - ![screenshot](documentation/wireframes/tabletwireframeAccount.png)
+
+</details>
+
+### Desktop Wireframes
+
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
+
+Index
+  - ![screenshot](documentation/wireframes/webwireframeIndex.png)
+
+Account
+  - ![screenshot](documentation/wireframes/webwireframeAccount.png)
+
+</details>
+
