@@ -29,10 +29,10 @@
             {% if messages %}
                 <div class="flash-messages">
                     {% for category, message in messages %}
-                        <blockquote class="flash-message {{ category }}">
+                        <div class="flash-message {{ category }}">
                             {{ message }} 
                             <button class="close-btn">&times;</button>
-                        </blockquote>
+                        </div>
                     {% endfor %}
                 </div>
             {% endif %}
