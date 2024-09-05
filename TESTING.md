@@ -23,4 +23,13 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | --- | --- | --- | --- |
 | static | style.css | ![screenshot](documentation/testingScreenshots/stylesCssValidator.jpeg) | One warning due to validator unable to interpret @import links |
 
+### JavaScript
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| Directory | File | Screenshot | Notes |
+| --- | --- | --- | --- |
+| templates | account.html | ![screenshot](documentation/testingScreenshots/jsAccountValidation.jpeg) | |
+| templates | index.html | ![screenshot](documentation/testingScreenshots/jsIndexValidation.jpeg) | |
+| static | script.js | ![screenshot](documentation/testingScreenshots/jsScriptValidation.jpeg) | |
 
