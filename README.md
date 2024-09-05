@@ -524,3 +524,31 @@ You can fork this repository by using the following steps:
 
 The local version of your application runs locally with local variables. In contrast, the deployed site on Heroku operates in a production environment with scalable resources, a cloud-based database, and optimized performance settings. Deployment involves pushing code to Heroku, which handles scaling, security, and public access via a live URL. While the local environment is flexible and focused on development, the deployment ensures stability, security, and performance for end users.
 
+## Credits
+
+### Content
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
+| [Materialize](https://materializecss.com/color.html) | entire site | help with component intergration |
+| [W3Schools](https://pymongo.readthedocs.io/en/stable/tutorial.html) | Database | Debug Pymongo |
+| [Flask](https://flask.palletsprojects.com/en/3.0.x/) | app.py | how to use the flask packages like werkzeug.security |
+| [Mongodb](https://www.w3schools.com/mongodb/index.php) | database | how to use Mongodb |
+| [W3Schools](https://www.w3schools.com/python/default.asp) | app.py | how to use Python / Debug |
+| [W3Schools](https://www.w3schools.com/python/python_regex.asp) | index | Form filtering |
+| [W3Schools](https://www.w3schools.com/js/js_ajax_intro.asp) | account | used to handle get delete request |
+| [W3Schools](https://www.w3schools.com/jquery/) | whole site | tutorials for shortening JS |
+| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
+
+### Media
+
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [Pexels](https://www.pexels.com/video/an-empty-movie-theater-7989632/) | entire site | video | index video background |
+| [Pexels](https://www.pexels.com/photo/grayscale-photography-of-people-sitting-on-chair-inside-building-2774566/) | account page | image | account image background |
+| [favicon.io](https://favicon.io/emoji-favicons/cinema) | entire site | image | site favicon |
+
+
+
