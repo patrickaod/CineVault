@@ -237,3 +237,19 @@ Account
 
 
 
+### Future Features
+
+- Friends List:
+    - Enables users to follow friends and share movie recommendations, similar to IMDb.
+- Intergrated Watchlist:
+  - Link movie cards to a dedicated list of watchable movies, with each entry featuring direct links for easy access.
+- Movie Card:
+  - Upload images to create your own movie titles.
+  - Enable the cards to flip between the movie title and the information on the back. 
+- Role based - Admin Privileges:
+    - User Permissions 
+    - Content Management 
+    - Theme settings 
+    - Component / widget injection (special offers / events)
+
+
