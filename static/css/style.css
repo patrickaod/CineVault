@@ -101,6 +101,7 @@ button:hover {
 
 #header-container.moving .button-container {
     opacity: 0; /* Hide form buttons */
+    pointer-events: none;
 }
 
 #header-container.moving #back-button {
@@ -240,8 +241,15 @@ nav ul a:hover {
     padding: 10px;
 }
 
-/* Content Container - Middle Section Styles */
+.input-field>label {
+    color: #FFC107;
+}
 
+input[type=search]:not(.browser-default) {
+    border-bottom: 1px solid #FFC107;
+}
+
+/* Content Container - Middle Section Styles */
 
 .middle-section {
     padding: 10px;
