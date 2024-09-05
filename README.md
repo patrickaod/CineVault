@@ -62,3 +62,23 @@ In case the primary fonts fail to load, I’ve set a fallback to sans-serif. Thi
 
 Using the Materialize framework streamlines the development process by providing pre-built components and responsive design elements. I incorporated various icons from its library to enhance the visual appeal of the application, making the interface more intuitive and engaging for users.
 
+## User Stories
+
+### New Site Users
+
+- As a new site user, I would like to collate my favorite movies, so that I can enjoy them at a later date.
+- As a new site user, I would like to review movies I add, so that can remind myself how I felt.
+- As a new site user, I would like to create a watchlist of things I want to see, so that it speeds up the process of me looking for something later.
+- As a new site user, I would like an easily searchable list of movies, so that I can find something to watch quickly.
+- As a new site user, I would like my movies to be seperated by genre, so that I can different collections of movies.
+
+### Returning Site Users
+
+- As a returning site user, I would like to everything to be save, so that I don't have the hassle of re-uploading anything.
+- As a returning site user, I would like to easily manageable, so that I can add or remove movies at will.
+- As a returning site user, I would like to know when something was last updated, so that I can keep track of my collection.
+- As a returning site user, I would like to user-friendly features, so that I can back out of a decision if I want.
+- As a returning site user, I would like to know my collection is safe, so that I can have piece of mind.
+
+
+
