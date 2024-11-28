@@ -146,6 +146,28 @@ button:hover {
     transform: translateY(-3px) scale(0.8);
 }
 
+/* SignIn Form - Helper Text */
+
+.helper-text-list {
+    margin: 0;
+    padding: 0 0 0 1.5em; /* Indent bullets slightly */
+    list-style-type: none;
+}
+
+.helper-text-list .requirement {
+    font-size: 14px;
+    color: #757575; /* Subtle red */
+}
+
+.helper-text-list .requirement.valid {
+    color: #6acc70; /* Subtle green */
+}
+
+.helper-text-list .requirement.invalid {
+    color: #cc6a6a; /* Subtle red */
+}
+
+
 /* Index Video Background */
 
 .video-background {
