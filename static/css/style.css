@@ -51,6 +51,7 @@ button:hover {
 .card-panel {
     background-color: #1C1C1C;  /* Slightly lighter dark for card backgrounds */
     color: #E0E0E0;  /* Text color */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .white-text {
