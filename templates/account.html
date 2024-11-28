@@ -35,13 +35,15 @@
   <!-- Top container - Seacrh -->
   <div class="top-section">
     <!-- Search Form -->
-    <form action="{{ url_for('search_movies') }}" method="post" class="col s12">
+    <form action="{{ url_for('search_movies') }}" method="post" class="col s12" autocomplete="on">
       <div class="row">
         <div class="input-field col s6 m3 right">
           <input id="search_movies" name="search_movies" type="search">
           <label class="label-icon" for="search_movies"><i class="material-icons">search</i></label>
         </div>
       </div>
+      <!-- Add this submit button -->
+      <button type="submit" style="display: none;">Submit</button>
     </form>
   </div>
   <!-- Middle container - Movie Display -->
@@ -262,7 +264,7 @@
         $searchInput.val(' ' + inputValue.trim());
       }
     });
-
+    
   });
 </script>
 {% endblock %}
