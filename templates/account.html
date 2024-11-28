@@ -4,161 +4,160 @@
 
 <!-- Background Image Container -->
 <div class="background-container">
-    <!-- Background Image -->
-    <img src="{{ url_for('static', filename='images/theater.jpg') }}" alt="Background Image" class="background-image">
+  <!-- Background Image -->
+  <img src="{{ url_for('static', filename='images/theater.jpg') }}" alt="Background Image" class="background-image">
 </div>
 
 <!-- Navigation Menu -->
 <header>
-    <!-- Main Navigation Menu -->
-    <nav class="nav-extended navmargin">
-        <div class="nav-wrapper">
-            <!-- Logo & Account Link -->
-            <a href="{{url_for('account', username=session['user'])}}" class="brand-logo nav-logo m-2 ">
-                <h2>CineVault</h2>
-            </a>
-            <!-- Hamburger Trigger -->
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <!-- Right-Cluster of Navigation Links-->
-            <ul class="right hide-on-med-and-down">
-                <!-- Logout -->
-                <li><a href="{{url_for('logout')}}">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Mobile sidenav -->
-    <ul class="sidenav" id="mobile-demo">
+  <!-- Main Navigation Menu -->
+  <nav class="nav-extended navmargin">
+    <div class="nav-wrapper">
+      <!-- Logo & Account Link -->
+      <a href="{{url_for('account', username=session['user'])}}" class="brand-logo nav-logo m-2 ">
+        <h2>CineVault</h2>
+      </a>
+      <!-- Hamburger Trigger -->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <!-- Right-Cluster of Navigation Links-->
+      <ul class="right hide-on-med-and-down">
         <!-- Logout -->
         <li><a href="{{url_for('logout')}}">Logout</a></li>
-    </ul>
+      </ul>
+    </div>
+  </nav>
+  <!-- Mobile sidenav -->
+  <ul class="sidenav" id="mobile-demo">
+    <!-- Logout -->
+    <li><a href="{{url_for('logout')}}">Logout</a></li>
+  </ul>
 </header>
 <!-- Content container -->
 <div id="content-container">
-    <!-- Top container - Seacrh -->
-    <div class="top-section">
-        <!-- Search Form -->
-        <form action="{{ url_for('search_movies') }}" method="post" class="col s12">
-            <div class="row">
-                <div class="input-field col s6 m3 right">
-                    <input id="search_movies" name="search_movies" type="search">
-                    <label class="label-icon" for="search_movies"><i class="material-icons">search</i></label>
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- Middle container - Movie Display -->
-    <div class="middle-section">
-        <!-- Middle section - Add Button -->
-        <button id="middleAddMovieBtn" class="add-movie-btn">Add Movie</button>
-        <!-- Movie Card For Loop -->
-        {% for movie in movies %}
-        <!-- Movie card container -->
-        <div class="movie-card">
-            <ul>
-                <li>
-                    <div class="row">
-                        <div class="col s12 m5">
-                            <!-- Movie card -->
-                            <div class="card-panel">
-                                <div class="white-text">
-                                    <h2>Movie: {{ movie.title }}</h2><br>
-                                    <h2>Genre: {{ movie.genre }} </h2><br>
-                                    <h2>Review: {{ movie.rating }}</h2><br>
-                                    <h2>To watch: {{ movie.watchlist }}</h2><br>
-                                    {% if movie.created_on == movie.updated_on %}
-                                    <h2>Added on: {{ movie.created_on }}</h2><br>
-                                    {% else %}
-                                    <h2>Updated on: {{ movie.updated_on }}</h2><br>
-                                    {% endif %}
-                                </div>
-                                <!-- Movie card button container -->
-                                <div class="row">
-                                    <!-- Edit button and form values -->
-                                    <button class="editMovieBtn" edit_movie_id="{{ movie._id }}"  data-id="{{ movie._id }}"
-                                        data-title="{{ movie.title }}" data-genre="{{ movie.genre }}"
-                                        data-rating="{{ movie.rating }}"
-                                        data-watchlist="{{ movie.watchlist }}">Edit</button>
-                                    <!-- Delete button -->
-                                    <button class="deleteMovieBtn" delete_movie_id="{{ movie._id }}">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        {% endfor %}
-    </div>
-    <!-- Bottom container - Add Button -->
-    <div class="bottom-section">
-        <!-- Bottom section - Add Button -->
-        <button id="bottomAddMovieBtn" class="add-movie-btn">Add Movie</button>
-    </div>
-</div>
-<!-- Movie form container-->
-<div class="movieform">
-    <!-- Movie form -->
-    <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('account', username=session['user'])}}">
-      <input type="hidden" name="form_id" value="movie_user_add">
-      <input type="hidden" name="movie_id" value="" id="movieId">
-      <div class="card-panel">
-        <!-- Title -->
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="title" name="title" type="text" class="validate" required>
-            <label for="title">Title</label>
-          </div>
-        </div>
-        <!-- Genre -->
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="genre" name="genre" type="text" class="validate" required>
-            <label for="genre">Genre</label>
-          </div>
-        </div>
-        <!-- Rating -->
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="rating" name="rating" type="text" class="validate" required>
-            <label for="rating">Review</label>
-          </div>
-        </div>
-        <!-- Watchlist -->
-        <div class="row">
-          <div class="switch">
-            <label for="watchlist">
-              Watchlist
-              <input type="checkbox" id="watchlist" name="watchlist">
-              <span class="lever"></span>
-            </label>
-          </div>
-        </div>
-        <!-- Submission -->
-        <div class="row">
-          <button class="btn btn-primary col s12 btn-large">Submit</button>
+  <!-- Top container - Seacrh -->
+  <div class="top-section">
+    <!-- Search Form -->
+    <form action="{{ url_for('search_movies') }}" method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s6 m3 right">
+          <input id="search_movies" name="search_movies" type="search">
+          <label class="label-icon" for="search_movies"><i class="material-icons">search</i></label>
         </div>
       </div>
     </form>
-    <!-- Cancel form button -->
-    <button id="moviecancel">Cancel</button>
   </div>
+  <!-- Middle container - Movie Display -->
+  <div class="middle-section">
+    <!-- Middle section - Add Button -->
+    <button id="middleAddMovieBtn" class="add-movie-btn">Add Movie</button>
+    <!-- Movie Card For Loop -->
+    {% for movie in movies %}
+    <!-- Movie card container -->
+    <div class="movie-card">
+      <ul>
+        <li>
+          <div class="row">
+            <div class="col s12 m5">
+              <!-- Movie card -->
+              <div class="card-panel">
+                <div class="white-text">
+                  <h2>Movie: {{ movie.title }}</h2><br>
+                  <h2>Genre: {{ movie.genre }} </h2><br>
+                  <h2>Review: {{ movie.rating }}</h2><br>
+                  <h2>To watch: {{ movie.watchlist }}</h2><br>
+                  {% if movie.created_on == movie.updated_on %}
+                  <h2>Added on: {{ movie.created_on }}</h2><br>
+                  {% else %}
+                  <h2>Updated on: {{ movie.updated_on }}</h2><br>
+                  {% endif %}
+                </div>
+                <!-- Movie card button container -->
+                <div class="row">
+                  <!-- Edit button and form values -->
+                  <button class="editMovieBtn" edit_movie_id="{{ movie._id }}" data-id="{{ movie._id }}"
+                    data-title="{{ movie.title }}" data-genre="{{ movie.genre }}" data-rating="{{ movie.rating }}"
+                    data-watchlist="{{ movie.watchlist }}">Edit</button>
+                  <!-- Delete button -->
+                  <button class="deleteMovieBtn" delete_movie_id="{{ movie._id }}">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- Bottom container - Add Button -->
+  <div class="bottom-section">
+    <!-- Bottom section - Add Button -->
+    <button id="bottomAddMovieBtn" class="add-movie-btn">Add Movie</button>
+  </div>
+</div>
+<!-- Movie form container-->
+<div class="movieform">
+  <!-- Movie form -->
+  <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('account', username=session['user'])}}">
+    <input type="hidden" name="form_id" value="movie_user_add">
+    <input type="hidden" name="movie_id" value="" id="movieId">
+    <div class="card-panel">
+      <!-- Title -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="title" name="title" type="text" class="validate" required>
+          <label for="title">Title</label>
+        </div>
+      </div>
+      <!-- Genre -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="genre" name="genre" type="text" class="validate" required>
+          <label for="genre">Genre</label>
+        </div>
+      </div>
+      <!-- Rating -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="rating" name="rating" type="text" class="validate" required>
+          <label for="rating">Review</label>
+        </div>
+      </div>
+      <!-- Watchlist -->
+      <div class="row">
+        <div class="switch">
+          <label for="watchlist">
+            Watchlist
+            <input type="checkbox" id="watchlist" name="watchlist">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+      <!-- Submission -->
+      <div class="row">
+        <button class="btn btn-primary col s12 btn-large">Submit</button>
+      </div>
+    </div>
+  </form>
+  <!-- Cancel form button -->
+  <button id="moviecancel">Cancel</button>
+</div>
 <!-- Confirmation Box -->
 <div class="delete_confirmation">
-    <div class="col s12 m6">
-      <div class="card-panel">
-        <div class="card-content white-text">
-          <div class="card-title">
-            <h3>Confirmation</h3>
-          </div>
-          <p>Would you like to delete this movie?</p>
+  <div class="col s12 m6">
+    <div class="card-panel">
+      <div class="card-content white-text">
+        <div class="card-title">
+          <h3>Confirmation</h3>
         </div>
-        <div class="card-action">
-          <a href="#" id="confirmCancel">Cancel</a>
-          <a href="#" id="confirmDelete" class="right">Confirm</a>
-        </div>
+        <p>Would you like to delete this movie?</p>
+      </div>
+      <div class="card-action">
+        <a href="#" id="confirmCancel">Cancel</a>
+        <a href="#" id="confirmDelete" class="right">Confirm</a>
       </div>
     </div>
   </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
@@ -253,6 +252,17 @@
     $('#confirmCancel').click(function () {
       $('.delete_confirmation').hide(); // Hide confirmation box
       $('#content-container').removeClass('blurred'); // Unblur background content
+    });
+
+    // Attach an input event handler to the search field
+    $('#search_movies').on('input', function () {
+      const $searchInput = $(this);
+      let inputValue = $searchInput.val();
+
+      // Check if the input value is empty or too short and add a space at the beginning if needed
+      if (inputValue.trim().length < 2 && !inputValue.startsWith(' ')) {
+        $searchInput.val(' ' + inputValue.trim());
+      }
     });
 
   });
