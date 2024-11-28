@@ -162,7 +162,7 @@ def search_movies():
         '_', '+', '=', '{', '}', '[', ']', ':', ';', '"', "'", '<',
         '>', ',', '.', '?', '`', '~', '|'
     ]
-    if search_query[-1] in special_characters:
+    if search_query.endswith(tuple(special_characters)):
         flash("The search input cannot end with special characters like '\\'.", "error")  # noqa
         return redirect(url_for('account', username=session["user"]))
 
