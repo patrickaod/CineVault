@@ -153,8 +153,19 @@ def account(username):
 
 
 @app.route("/search_movies", methods=["POST"])
-def search_movies(username):
+def search_movies():
     search_query = request.form.get('search_movies', '').strip()
+    print(search_query)
+
+    # Check if the input ends with a backslash or other special characters
+    special_characters = [
+        '\\', '/', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+        '_', '+', '=', '{', '}', '[', ']', ':', ';', '"', "'", '<',
+        '>', ',', '.', '?', '`', '~', '|'
+    ]
+    if search_query[-1] in special_characters:
+        flash("The search input cannot end with special characters like '\\'.", "error")  # noqa
+        return redirect(url_for('account', username=session["user"]))
 
     if search_query:
         # Search for movies that match the search query
@@ -170,7 +181,7 @@ def search_movies(username):
             {"created_by": session["user"]}).sort("created_on", 1)
 
     return render_template(
-        "account.html", username=username, movies=movies)
+        "account.html", username=session["user"], movies=movies)
 
 
 @app.route("/logout")
