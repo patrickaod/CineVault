@@ -37,7 +37,7 @@
     <!-- Top container - Seacrh -->
     <div class="top-section">
         <!-- Search Form -->
-        <form action="{{ url_for('search_movies') }}" method="post" class="col s12">
+        <form action="{{ url_for('search_movies', username=session['user']) }}" method="post" class="col s12">
             <div class="row">
                 <div class="input-field col s6 m3 right">
                     <input id="search_movies" name="search_movies" type="search">
@@ -74,7 +74,7 @@
                                 <!-- Movie card button container -->
                                 <div class="row">
                                     <!-- Edit button and form values -->
-                                    <button class="editMovieBtn" edit_movie_id="{{ movie.id }}"
+                                    <button class="editMovieBtn" edit_movie_id="{{ movie._id }}"  data-id="{{ movie._id }}"
                                         data-title="{{ movie.title }}" data-genre="{{ movie.genre }}"
                                         data-rating="{{ movie.rating }}"
                                         data-watchlist="{{ movie.watchlist }}">Edit</button>
@@ -100,6 +100,7 @@
     <!-- Movie form -->
     <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('account', username=session['user'])}}">
       <input type="hidden" name="form_id" value="movie_user_add">
+      <input type="hidden" name="movie_id" value="" id="movieId">
       <div class="card-panel">
         <!-- Title -->
         <div class="row">
