@@ -415,6 +415,7 @@ input[type=search]:not(.browser-default) {
     font-size: 16px;
     font-family: Arial, sans-serif;
     width: auto; /* Adjust width to fit content */
+    padding-left: 10px;
 }
 
 .flash-message.show {
