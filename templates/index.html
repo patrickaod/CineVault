@@ -27,6 +27,11 @@
         <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
             <input type="hidden" name="form_id" value="sign-up">
             <div class="card-panel">
+                <!-- Instructions -->
+                <p class="form-instructions">
+                    Please create a username and password. Your username and password must be between 5 and 15
+                    characters long and contain only letters and numbers.
+                </p>
                 <!-- Username Field -->
                 <div class="row">
                     <div class="input-field col s12">
@@ -34,6 +39,14 @@
                         <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" required>
                         <label for="username">Username</label>
+                    </div>
+                    <!-- Username Helper Text -->
+                    <div class="col s12">
+                        <ul id="username-requirements" class="helper-text-list">
+                            <li id="username-length" class="requirement">Must be 5-15 characters long</li>
+                            <li id="username-characters" class="requirement">Must contain only letters and
+                                numbers</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- Password Field -->
@@ -43,6 +56,15 @@
                         <input id="password" name="password" type="password" class="validate" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                         <label for="password">Password</label>
+                        <!-- Password Requirements -->
+                    </div>
+                    <!-- Password Helper Text -->
+                    <div class="col s12">
+                        <ul id="password-requirements" class="helper-text-list">
+                            <li id="password-length" class="requirement">Must be 5-15 characters long</li>
+                            <li id="password-characters" class="requirement">Must contain only letters and
+                                numbers</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- Submit Form Button -->
@@ -60,6 +82,10 @@
         <form class="col s12 m8 offset-m2" method="POST" action="{{url_for('index')}}">
             <input type="hidden" name="form_id" value="login">
             <div class="card-panel">
+                <!-- Instructions -->
+                <p class="form-instructions">
+                    Enter your username and password to log in.
+                </p>
                 <!-- Username Field -->
                 <div class="row">
                     <div class="input-field col s12">
@@ -132,6 +158,53 @@
             hideForm($signupForm);
             hideForm($loginForm);
         });
+    });
+    // Select fields and requirements
+    const $usernameField = $('#username');
+    const $passwordField = $('#password');
+
+    const $usernameLength = $('#username-length');
+    const $usernameCharacters = $('#username-characters');
+
+    const $passwordLength = $('#password-length');
+    const $passwordCharacters = $('#password-characters');
+
+    // Validate Username
+    $usernameField.on('input', function () {
+        const value = $usernameField.val();
+
+        // Length Validation
+        if (value.length >= 5 && value.length <= 15) {
+            $usernameLength.removeClass('invalid').addClass('valid');
+        } else {
+            $usernameLength.removeClass('valid').addClass('invalid');
+        }
+
+        // Character Validation
+        if (/^[a-zA-Z0-9]*$/.test(value)) {
+            $usernameCharacters.removeClass('invalid').addClass('valid');
+        } else {
+            $usernameCharacters.removeClass('valid').addClass('invalid');
+        }
+    });
+
+    // Validate Password
+    $passwordField.on('input', function () {
+        const value = $passwordField.val();
+
+        // Length Validation
+        if (value.length >= 5 && value.length <= 15) {
+            $passwordLength.removeClass('invalid').addClass('valid');
+        } else {
+            $passwordLength.removeClass('valid').addClass('invalid');
+        }
+
+        // Character Validation
+        if (/^[a-zA-Z0-9]*$/.test(value)) {
+            $passwordCharacters.removeClass('invalid').addClass('valid');
+        } else {
+            $passwordCharacters.removeClass('valid').addClass('invalid');
+        }
     });
 </script>
 {% endblock %}
