@@ -11,10 +11,9 @@
 <!-- Navigation Menu -->
 <header>
   <!-- Main Navigation Menu -->
-  <nav class="nav-extended navmargin">
-    <div class="nav-wrapper">
+  <nav class="navmargin">
       <!-- Logo & Account Link -->
-      <a href="{{url_for('account', username=session['user'])}}" class="brand-logo nav-logo m-2 ">
+      <a href="{{url_for('account', username=session['user'])}}" class="brand-logo nav-logo">
         <h2>CineVault</h2>
       </a>
       <!-- Hamburger Trigger -->
@@ -24,7 +23,6 @@
         <!-- Logout -->
         <li><a href="{{url_for('logout')}}">Logout</a></li>
       </ul>
-    </div>
   </nav>
   <!-- Mobile sidenav -->
   <ul class="sidenav" id="mobile-demo">
