@@ -155,7 +155,6 @@ def account(username):
 @app.route("/search_movies", methods=["POST"])
 def search_movies():
     search_query = request.form.get('search_movies', '').strip()
-    print(search_query)
 
     # Check if the input ends with a backslash or other special characters
     special_characters = [
