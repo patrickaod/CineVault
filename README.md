@@ -140,11 +140,11 @@ Account
 
 ### Existing Features
 
-- **Animated Header and Form Fields**
+- **Dynamic Sign-in Form**
 
     - The animation provides a smooth, enticing, responsive introduction to the website.
 
-![Header and Form Animation](documentation/screenRecordings/headerAnimation.gif)
+![Dynamic sign-in form](documentation/screenRecordings/dynamic_signin_form.gif)
 
 - **Minimalist Homepage**
 
