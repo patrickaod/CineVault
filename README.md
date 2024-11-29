@@ -1,15 +1,23 @@
-# [CINEVAULT](https://cinevault-f47e66547791.herokuapp.com)
+# [CineVault: Personal Movie Collection App](https://cinevault-f47e66547791.herokuapp.com)
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/patrickaod/CineVault)](https://github.com/patrickaod/CineVault/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/patrickaod/CineVault)](https://github.com/patrickaod/CineVault/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/patrickaod/CineVault)](https://github.com/patrickaod/CineVault)
----
+
+# Project Overview
+
+[CineVault](https://cinevault-f47e66547791.herokuapp.com) is a [Flask](https://flask.palletsprojects.com/en/stable/)-based [CRUD](https://www.codecademy.com/article/what-is-crud) application that lets users manage their personal movie collections with ease. Users can create secure accounts or log in using hashed passwords powered by [Werkzeug](https://werkzeug.palletsprojects.com/en/stable/), and perform actions like adding, editing, deleting, and searching for movies stored in a [MongoDB](https://www.mongodb.com/) database. The app features a dynamic and responsive interface styled with [MaterializeCSS](https://materializecss.com/), while [jQuery](https://jquery.com/) enhances interactivity by animating helper text, dynamically displaying forms, and improving search functionality. CineVault ensures a seamless and intuitive experience for managing movie collections, combining secure authentication, robust data handling, and an engaging user interface.
+
+**Key Features:**
+- Role-Based Access Control: Assigns user roles to enable secure and structured permissions.
+- User Authentication: Secure account creation and login using hashed passwords via [Werkzeug](https://werkzeug.palletsprojects.com/en/stable/).
+- Comprehensive CRUD Functionality: Add, edit, delete, and search movies in a personal collection.
+- Dynamic UI: Interactive animations, form transitions, and search optimizations powered by [jQuery](https://jquery.com/).
+- Database Integration: Robust movie management using [MongoDB](https://www.mongodb.com/) and [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/).
+- Responsive Design: Sleek and user-friendly navigation, styled with [MaterializeCSS](https://materializecss.com/).
+- Robust Validation: Ensures data consistency and security using [Flask](https://flask.palletsprojects.com/en/stable/), [Werkzeug](https://werkzeug.palletsprojects.com/en/stable/), and [MongoDB](https://www.mongodb.com/) tools.
+
 ![amIresponsive: CineVault](documentation/screenshots/amIresponsive.png)
-
-# Project Overview: CineVault 
-
-Your Personalized Movie Collection and Management Application. CineVault is a web-based application designed to allow users to create, manage, and explore their own personalised movie collections. The application provides functionality for user registration, login, adding, editing, and deleting movies. The interface dynamically adjusts to display appropriate UI elements based on the users screen size or to what movies they have in their collection.
-The application also supports role-based and session-based access control to ensure secure appropriate access within the platform.
 
 ## UX
 
