@@ -39,7 +39,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| root | app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/patrickaod/CineVault/main/app.py) | ![screenshot](documentation/testingScreenshots/pythonValidator.jpeg) | Unfortunately, seperating the mongodb queries prevented the code base from running. To retain stability further investigation is required to resolve these linting issue. |
+| root | app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/patrickaod/CineVault/main/app.py) | ![screenshot](documentation/testingScreenshots/appPep8Validation.png) | Unfortunately, seperating the mongodb queries prevented the code base from running. To retain stability further investigation is required to resolve these linting issue. |
 
 ## Browser Compatibility
 
