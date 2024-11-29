@@ -283,7 +283,9 @@ Account
 - [![PyMongo](https://img.shields.io/badge/PyMongo-grey?logo=mongodb&logoColor=47A248)](https://pymongo.readthedocs.io/en/stable/) used for Python-MongoDB integration and data management.  
 - [![Google Fonts](https://img.shields.io/badge/Google%20Fonts-grey?logo=google&logoColor=4285F4)](https://fonts.google.com/) used for modern, web-safe typography.  
 - [![Werkzeug](https://img.shields.io/badge/Werkzeug-grey?logo=pallets&logoColor=000000)](https://werkzeug.palletsprojects.com/) used for password hashing and utility functions.  
-- [![Ezgif](https://img.shields.io/badge/Ezgif-grey?logo=image&logoColor=FFDD00)](https://ezgif.com/) used for creating and optimizing GIFs.  
+- [![Ezgif](https://img.shields.io/badge/Ezgif-grey?logo=image&logoColor=FFDD00)](https://ezgif.com/) used for creating and optimizing GIFs.
+- [![FreeConvert](https://img.shields.io/badge/FreeConvert-grey?logo=freebsd&logoColor=FF5722)](https://www.freeconvert.com/) used to reduce video size.
+- [![Grammarly](https://img.shields.io/badge/Grammarly-grey?logo=grammarly&logoColor=00A4CC)](https://www.grammarly.com/) used for proofing. 
  
 ## Database Design
 
