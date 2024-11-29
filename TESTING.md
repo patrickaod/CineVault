@@ -67,12 +67,14 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 Lighthouse is a tool for auditing web pages, assessing performance, accessibility, best practices, and SEO. To test your live site, you can use Chrome DevTools, the Lighthouse CLI, PageSpeed Insights, or Web.dev Measure. Key areas to analyse performance metrics like loading speed and visual stability, accessibility, and SEO. Integrating Lighthouse into your project can helps enhance your site's user experience and search engine visibility.
 
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+I have tested my deployed project using the Lighthouse Audit tool to identify any major issues. The analysis reveals strong performance across all templates and devices: a performance score of 86+, accessibility at 100, best practices at 100, and SEO at 90. To increase mobile proformance, I plan to reduce load times by deferring the loading of external links and scripts.
+
+Although the project size may not be sufficient for fully accurate readings on accessibility and best practices, these results are promising. While SEO is already optimized to its fullest, website traffic can be further enhanced by leveraging technologies such as Facebook's [Open Graph Protocol](https://ogp.me/).
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Index | ![screenshot](documentation/testingScreenshots/googleLighthouseMobile.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktop.png) | positive results |
-| Account | ![screenshot](documentation/testingScreenshots/googleLighthouseMobileAccount.png) | ![screenshot](documentation/testingScreenshots/googleLighthouseDesktopAccount.png) | positive results |
+| Index | ![screenshot](documentation/testingScreenshots/indexLighthouseMobile.png) | ![screenshot](documentation/testingScreenshots/indexLighthouseDesktop.png) | positive results |
+| Account | ![screenshot](documentation/testingScreenshots/accountLighthouseMobile.png) | ![screenshot](documentation/testingScreenshots/accountLighthouseDesktop.png) | positive results |
 
 ## Defensive Programming
 
