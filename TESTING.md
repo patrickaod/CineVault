@@ -12,7 +12,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
 | templates | account.html | ![screenshot](documentation/testingScreenshots/accountHtmlValidation.jpeg) | Errors due to validator unable to interpret Jinja |
-| templates | index.html | ![screenshot](documentation/testingScreenshots/indexHtmlValidation.jpeg) | Errors due to validator unable to interpret Jinja |
+| templates | index.html | ![screenshot](documentation/testingScreenshots/indexHtmlValidation.png) | |
 | templates | base.html | ![screenshot](documentation/testingScreenshots/baseHtmlValidation.jpeg) | Errors due to validator unable to interpret Jinja |
 
 ### CSS
