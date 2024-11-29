@@ -87,7 +87,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | When user clicks back during animation the container should return | Tested the feature by doing the test | The feature did return mid animation, but produced a form | The feature passed the test and this error is produced by the same events-pointer issue. | ![screenshot](documentation/defensiveTesting/unexpectedForm.gif) |
 | Account | | | | | |
 | | When the add form is displayed everything should be disabled bar the nav | Tested the feature by doing displaying the form | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountAddForm.png) |
-| | When the delete confirmation form is displayed everything should be disabled except for the nav | Tested the feature by doing Y | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountDelConf.pngg) |
+| | When the delete confirmation form is displayed everything should be disabled except for the nav | Tested the feature by doing Y | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensiveTesting/accountDelConf.png) |
 
 ## User Story Testing
 
