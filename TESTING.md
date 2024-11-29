@@ -29,8 +29,8 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| templates | account.html | ![screenshot](documentation/testingScreenshots/jsAccountValidation.jpeg) | |
-| templates | index.html | ![screenshot](documentation/testingScreenshots/jsIndexValidation.jpeg) | |
+| templates | account.html | ![screenshot](documentation/testingScreenshots/accountJsValidationpng.png) | |
+| templates | index.html | ![screenshot](documentation/testingScreenshots/indexJsValidation.png) | |
 | static | script.js | ![screenshot](documentation/testingScreenshots/jsScriptValidation.jpeg) | |
 
 ### Python
