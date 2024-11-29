@@ -180,7 +180,7 @@ Account
 
     - Flash messages provide real-time feedback to users by displaying temporary notifications, such as success or error messages, that automatically disappear after a set period.
 
-![Flash Messages](documentation/screenshots/flashmessages.png)
+![Flash Messages](documentation/screenshots/flash_message.png)
 
 - **Search Bar**
 
