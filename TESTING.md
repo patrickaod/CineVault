@@ -110,6 +110,14 @@ For this project I have chosen to not include automated testing. Jest is well-su
 
 ## Bugs
 
+- Account - Search Form: Prevention of form submission 
+    
+    - There was an issue with the search box preventing certain input from being entered. After debugging, it was found that the problem was related to the autofill feature. Specifically, if the autofill text selection was not closed, the search field would not accept input. Additionally, if there was no autofill box present, users had to type enough characters to trigger and close the autofill before being able to search. Despite thorough investigation, there was little information available on this issue. The solution, however, is straightforward: disabling autofill by setting `autocomplete="off"` resolved the problem.
+
+- Account - Search Form: Integer underflow
+
+    - An issue arose with PyMongo when handling search queries that ended with special characters (e.g. #). PyMongo would not accept these searches, so the original code `(if search_query[-1] in special_characters)` caused an `IndexError` when an empty search query was submitted, potentially leading to an infinite loop and a server crash with a 500 error. This was due to the code attempting to access the last character of an empty string. To resolve this, the code was updated to use `endswith()`, which safely checks if the string ends with any of the specified special characters without accessing indices directly. This change prevented errors with empty strings, avoided potential infinite loops, and improved the stability of the application.
+
 - Defensive Test: Duplicate forms
 
     ![screenshot](documentation/defensiveTesting/dupilateForms.png)
