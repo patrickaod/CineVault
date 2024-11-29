@@ -279,9 +279,12 @@ Account
 - [![MongoDB](https://img.shields.io/badge/MongoDB-grey?logo=mongodb&logoColor=47A248)](https://www.mongodb.com) used as the non-relational database management with Flask.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
-- [![Coolors](https://img.shields.io/badge/Coolors-grey?)](https://coolors.co/) used for colour scheme.
-- [![ClipChamp](https://img.shields.io/badge/ClipChamp-grey?)](https://clipchamp.com/en/) used for Gif creation.
-
+- [![Coolors](https://img.shields.io/badge/Coolors-grey?)](https://coolors.co/) used for selecting cohesive color schemes.  
+- [![PyMongo](https://img.shields.io/badge/PyMongo-grey?logo=mongodb&logoColor=47A248)](https://pymongo.readthedocs.io/en/stable/) used for Python-MongoDB integration and data management.  
+- [![Google Fonts](https://img.shields.io/badge/Google%20Fonts-grey?logo=google&logoColor=4285F4)](https://fonts.google.com/) used for modern, web-safe typography.  
+- [![Werkzeug](https://img.shields.io/badge/Werkzeug-grey?logo=pallets&logoColor=000000)](https://werkzeug.palletsprojects.com/) used for password hashing and utility functions.  
+- [![Ezgif](https://img.shields.io/badge/Ezgif-grey?logo=image&logoColor=FFDD00)](https://ezgif.com/) used for creating and optimizing GIFs.  
+ 
 ## Database Design
 
 My project uses a non-relational database with MongoDB, and therefore the database architecture doesn't have actual relationships like a relational database would.
