@@ -21,7 +21,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | style.css | ![screenshot](documentation/testingScreenshots/stylesCssValidator.jpeg) | One warning due to validator being unable to interpret @import links |
+| static | style.css | ![screenshot](documentation/testingScreenshots/cssValidation.png) | |
 
 ### JavaScript
 
