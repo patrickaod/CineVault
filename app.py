@@ -101,8 +101,12 @@ def account(username):
             except InvalidId:
                 # Handle invalid ObjectId
                 movie_check = False
-            # Initialise watchlist
-            watchlist = "yes" if request.form.get("watchlist") else "no"
+            # Retrieve the watchlist value from the form
+            watchlist = request.form.get("watchlist")
+
+            # Set watchlist based on the value retrieved, default to "no" if not valid
+            if watchlist not in {"yes", "no"}:
+                watchlist = "no"
 
             if movie_check:
                 # Update existing movie
