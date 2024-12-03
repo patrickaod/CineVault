@@ -79,7 +79,7 @@ def index():
                     else:
                         # invalid password match
                         flash("Incorrect Username and/or Password")
-                        return redirect(url_for(index))
+                        return redirect(url_for("index"))
             else:
                 # username doesn't exist
                 flash("Incorrect Username and/or Password", "error")
