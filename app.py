@@ -26,6 +26,13 @@ def index():
         form_id = request.form.get('form_id')
         if form_id == 'sign-up':
 
+            username = request.form.get('username')
+            password = request.form.get('password')
+
+            if not username or not password:
+                flash("All fields are required.", "error")
+                return render_template('index.html'), 200
+
             existing_user = mongo.db.users.find_one(
                 {'username': request.form.get('username', '').lower()})
 
