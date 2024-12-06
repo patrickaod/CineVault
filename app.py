@@ -110,9 +110,11 @@ def account(username):
             # Retrieve the watchlist value from the form
             watchlist = request.form.get("watchlist")
 
-            # Set watchlist based on the value retrieved, default to "no" if not valid
-            if watchlist not in {"yes", "no"}:
-                watchlist = "no"
+            # Format the watchlist value and handle unexpected inputs
+            if watchlist == "on":
+                watchlist = "Yes"
+            elif watchlist not in {"yes", "no"}:
+                watchlist = "No"
 
             if movie_check:
                 # Update existing movie
