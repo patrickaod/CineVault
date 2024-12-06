@@ -89,6 +89,12 @@ def index():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
+    # Safely check session
+    user = session.get('user')
+    if not user:
+        flash("You need to log in to access your account.", "error")
+        return redirect(url_for("index"))
+
     if request.method == 'POST':
         form_id = request.form.get('form_id')
         movie_id = request.form.get('movie_id')
